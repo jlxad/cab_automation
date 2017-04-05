@@ -1,14 +1,18 @@
 import dill
 import random
 import datetime
+import os
 
 now = datetime.datetime.now()
+fileDir = os.path.dirname(os.path.realpath('__file__'))
 cur_year =now.year
 
-state_list = ['ak','al','ar','az','ca','co','ct','dc','de','fl','ga','ia','id','il','in','ks','ky','la','ma','md',
+state_list1 = ['ak','al','ar','az','ca','co','ct','dc','de','fl','ga','ia','id','il','in','ks','ky','la','ma','md',
               'me','mi','mn','mo','ms','mt','nc','nd','ne','nh','nj','nm','nv','ny','oh','ok','or','pa','ri','sc',
               'sd','tn','tx','ut','va','vt','wa','wi','wv','wy','hi']
 
+state_list = ["al", "ak", "az", "ar","ca", "co", "ct", "de", "pr", "fl", "ga", "hi", "id", "gu","il", "in", "ia", "ks", "ky", "la", "me", "md", "ma", "vi","mi", "mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc", "nd",
+              "oh", "ok", "or", "pa", "ri", "sc", "sd", "tn","tx", "ut", "vt", "va","wa", "wv", "wi", "wy"]
 def create_dictionary_from_file(file_path):
 
     brand_map = dict()
@@ -134,6 +138,7 @@ def create_dictionary_from_file(file_path):
                     maximum_fre = max(age_dict, key=age_dict.get)
                     if age_dict[maximum_fre] is 1 and len(age_dict) is not 1:
                         predicted_age= random.choice(age_dict.keys())
+                        # predicted_age = max(age_dict.keys())
                     else:
                         predicted_age = maximum_fre
                     if (predicted_age >= 13) and (predicted_age <=17):
@@ -153,77 +158,77 @@ def create_dictionary_from_file(file_path):
                 else:
                     age_map['0'].add(line[0])
 
-                # # Country
-                # if line[5] != '':
-                #     country_list = line[5].split("|")
-                #     for ele in country_list:
-                #         list_c = set()
-                #         if ele not in country_map:
-                #             list_c.add(line[0])
-                #             country_map[ele] = list_c
-                #         else:
-                #             country_map[ele].add(line[0])
-                #
-                # # Behavioural Audiences
-                # if line[9] != '':
-                #     behav_aud_list = line[9].split("|")
-                #     for ele in behav_aud_list:
-                #         list_aud = set()
-                #         if ele not in behav_aud_map:
-                #             list_aud.add(line[0])
-                #             behav_aud_map[ele] = list_aud
-                #         else:
-                #             behav_aud_map[ele].add(line[0])
-                #
-                # # Third party audiences or segments
-                # if line[11] != '':
-                #     custom_list = line[11].split("|")
-                #     for ele in custom_list:
-                #         list_caud = set()
-                #         if ele not in custom_aud_map:
-                #             list_caud.add(line[0])
-                #             custom_aud_map[ele] = list_caud
-                #         else:
-                #             custom_aud_map[ele].add(line[0])
-                #
-                # # State
-                # if line[13] != '':
-                #     if line[13] not in state_map:
-                #         list1 = []
-                #         list1.append(line[0])
-                #         state_map[line[13]] = list1
-                #
-                #         if line[13] in state_list:
-                #             if "us" in country_map:
-                #                 country_map['us'].add(line[0])
-                #             else:
-                #                 list2= []
-                #                 list2.append(line[0])
-                #                 country_map['us'] = list2
-                #         else:
-                #             if line[5] != '':
-                #                 country_list = line[5].split("|")
-                #                 for ele in country_list:
-                #                     list_c = set()
-                #                     if ele not in country_map:
-                #                         list_c.add(line[0])
-                #                         country_map[ele] = list_c
-                #                     else:
-                #                         country_map[ele].add(line[0])
-                #     else:
-                #         state_map[line[13]].append(line[0])
-                #
-                # # Dma
-                #     if line[14] != '':
-                #         if line[14] not in dma_map:
-                #             list1=[]
-                #             list1.append(line[0])
-                #             dma_map[line[14]] = list1
-                #         else:
-                #             dma_map[line[14]].append(line[0])
-                #
-                # Gender
-                # Gender value from Predicted Gender column
+                # Behavioural Audiences
+                if line[9] != '':
+                    behav_aud_list = line[9].split("|")
+                    for ele in behav_aud_list:
+                        list_aud = set()
+                        if ele not in behav_aud_map:
+                            list_aud.add(line[0])
+                            behav_aud_map[ele] = list_aud
+                        else:
+                            behav_aud_map[ele].add(line[0])
+
+                # Third party audiences or segments
+                if line[11] != '':
+                    custom_list = line[11].split("|")
+                    for ele in custom_list:
+                        list_caud = set()
+                        if ele not in custom_aud_map:
+                            list_caud.add(line[0])
+                            custom_aud_map[ele] = list_caud
+                        else:
+                            custom_aud_map[ele].add(line[0])
+
+                # Country
+                if line[14] != '':
+                    if line[14] in state_list:
+                        if "us" in country_map:
+                            country_map['us'].add(line[0])
+                        else:
+                            list2 = set()
+                            list2.add(line[0])
+                            country_map['us'] = list2
+                    else:
+                        if line[5] != '':
+                            country_list = line[5].split("|")
+                            for ele in country_list:
+                                if ele not in country_map:
+                                    list_c = set()
+                                    list_c.add(line[0])
+                                    country_map[ele] = list_c
+                                else:
+                                    country_map[ele].add(line[0])
+                else:
+                 if line[5] != '':
+                    country_list = line[5].split("|")
+                    for ele in country_list:
+                        if ele not in country_map:
+                            list_c = set()
+                            list_c.add(line[0])
+                            country_map[ele] = list_c
+                        else:
+                            country_map[ele].add(line[0])
+                # State
+                if line[14] != '':
+                    if line[14] not in state_map:
+                        list1=set()
+                        list1.add(line[0])
+                        state_map[line[14]] = list1
+                    else:
+                        state_map[line[14]].add(line[0])
+
+                # Dma
+                if line[15] != '':
+                    if line[15] not in dma_map:
+                        list1= set()
+                        list1.add(line[0])
+                        dma_map[line[15]] = list1
+                    else:
+                        dma_map[line[15]].add(line[0])
+
+                #Gender
+                #Gender value from Predicted Gender column
                 if line[7] != '':
                     if line[7] not in gender_map:
                         list1 = set()
@@ -234,7 +239,7 @@ def create_dictionary_from_file(file_path):
                         gender_map[line[7]].add(line[0])
 
                 # Gender Value from Gender column
-                else:
+                elif line[4] != '':
                     pg = None
                     gender_list = line[4].split("|")
                     gen_map = {"m": 0, "f": 0}
@@ -268,31 +273,31 @@ def create_dictionary_from_file(file_path):
 
 
     # serialize the brand map
-    dill.dump(brand_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/brand.txt","w"),-1)
+    dill.dump(brand_map,open(fileDir+"/resources/brand.txt","w"),-1)
 
     # serialize the category map
-    dill.dump(category_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/category.txt","w"),-1)
+    dill.dump(category_map,open(fileDir+"/resources/category.txt","w"),-1)
 
     # serialize the country map
-    dill.dump(country_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/country.txt","w"),-1)
+    dill.dump(country_map,open(fileDir+"/resources/country.txt","w"),-1)
 
     # serialize the behavioural audience map
-    dill.dump(behav_aud_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/baud.txt","w"),-1)
+    dill.dump(behav_aud_map,open(fileDir+"/resources/baud.txt","w"),-1)
 
     # serialize the custom audience map
-    dill.dump(custom_aud_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/customaud.txt","w"),-1)
+    dill.dump(custom_aud_map,open(fileDir+"/resources/customaud.txt","w"),-1)
 
     # serialize the state map
-    dill.dump(state_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/state.txt","w"),-1)
+    dill.dump(state_map,open(fileDir+"/resources/state.txt","w"),-1)
 
     # serialize the dma map
-    dill.dump(dma_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/dma.txt","w"),-1)
+    dill.dump(dma_map,open(fileDir+"/resources/dma.txt","w"),-1)
 
     # Serialize the gender map
-    dill.dump(gender_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/gender.txt","w"),-1)
+    dill.dump(gender_map,open(fileDir+"/resources/gender.txt","w"),-1)
 
     # Serialize the age map
-    dill.dump(age_map,open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/age.txt","w"),-1)
+    dill.dump(age_map,open(fileDir+"/resources/age.txt","w"),-1)
 
 
 

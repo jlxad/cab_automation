@@ -1,6 +1,7 @@
 import unittest
 from framework.helpers.segment_size_helper import *
 from framework.helpers.segment_size_helper import data_provider
+from config import *
 import logging
 
 logger = logging.getLogger("cab.tests.segmentSizePostCategorysSaturdayTests")
@@ -196,6 +197,54 @@ class SegmentSizePostCategorySaturdayTests(unittest.TestCase):
         logger.info("Find users who visited restaurants "+str(fre)+"times in last quarter and on saturday and on night")
         request = {
             "category": {"direct": ["581208|"+str(fre)+"|1q|4|3"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
+
+     ################################### Category Combination - freq-(1,5,10),duration(all combs) ######################################
+
+
+     @data_provider(freq)
+     def test_user_visit_restaurants_of_freq_x_in_last_quarter(self,fre):
+
+        logger.info("Find users who visited restaurants "+str(fre)+"times in last quarter")
+        request = {
+            "category": {"direct": [category_id+"|"+str(fre)+"|1q|None|None"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
+     @data_provider(freq)
+     def test_user_visit_restaurants_of_freq_x_in_last_year(self,fre):
+
+        logger.info("Find users who visited restaurants "+str(fre)+"times in last quarter")
+        request = {
+            "brand": {"direct": [category_id+"|"+str(fre)+"|1y|None|None"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
+     @data_provider(freq)
+     def test_user_visit_restaurants_of_freq_x_in_last_month(self,fre):
+
+        logger.info("Find users who visited restaurants "+str(fre)+"times in last month")
+        request = {
+            "brand": {"direct": [category_id+"|"+str(fre)+"|1m|None|None"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
+     @data_provider(freq)
+     def test_user_visit_restaurants_of_freq_x_in_last_6months(self,fre):
+
+        logger.info("Find users who visited restaurants "+str(fre)+"times in last 6 months")
+        request = {
+            "brand": {"direct": [category_id+"|"+str(fre)+"|6m|None|None"]}
 
         }
 

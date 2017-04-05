@@ -2,20 +2,23 @@ import dill
 import datetime as dt
 import pandas as pd
 import logging
-import string
 from framework.helpers.build_dictionary_helper import *
+from config import *
 logger = logging.getLogger("cab.helpers.dictionary_query_builder")
 
-create_dictionary_from_file('/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/dump.txt')
-country_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/country.txt"))
-state_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/state.txt"))
-dma_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/dma.txt"))
-brand_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/brand.txt"))
-category_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/category.txt"))
-age_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/age.txt"))
-gender_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/gender.txt"))
-baud_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/baud.txt"))
-customaud_map = dill.load(open("/Users/sakthigurumaharaj/PycharmProjects/cab_v2_automation/resources/customaud.txt"))
+fileDir = os.path.dirname(os.path.realpath('__file__'))
+
+if len(sys.argv) > 4:
+ create_dictionary_from_file(file_path=file_path)
+country_map = dill.load(open(fileDir+"/resources/country.txt"))
+state_map = dill.load(open(fileDir+"/resources/state.txt"))
+dma_map = dill.load(open(fileDir+"/resources/dma.txt"))
+brand_map = dill.load(open(fileDir+"/resources/brand.txt"))
+category_map = dill.load(open(fileDir+"/resources/category.txt"))
+age_map = dill.load(open(fileDir+"/resources/age.txt"))
+gender_map = dill.load(open(fileDir+"/resources/gender.txt"))
+baud_map = dill.load(open(fileDir+"/resources/baud.txt"))
+customaud_map = dill.load(open(fileDir+"/resources/customaud.txt"))
 
 map_token = {
 
@@ -220,7 +223,7 @@ def get_result_from_dictionary_single_row(main_type, request_map):
                     return len(customaud_map[segment])
 
 
-def get_pattern(id,duration,timeofday,dayofweek):
+def get_pattern_old(id, duration, timeofday, dayofweek):
 
     last_quarter = 0
     last_week = 0
@@ -315,5 +318,53 @@ def get_last_but_one_quarter(last_quarter):
         return 4
     else:
         return last_quarter-1
+
+def get_pattern(id,duration,timeofday,dayofweek):
+
+    duration_map = {
+        "1m": ["30d","1"],
+        "1y": ["yr","1"],
+        "1q": ["3m","1"],
+        "6m": ["6m","1"]
+    }
+
+    day_of_week_map = {
+        "1": ["wkdy","1"],
+        "2": ["wknd","1"],
+        "3": ["dow","6"],
+        "4": ["dow","7"]
+    }
+
+    time_of_day_map = {
+        "1": ["tod", "1"],
+        "2": ["tod", "2"],
+        "3": ["tod", "3"],
+        "4": ["tod", "4"]
+
+    }
+
+    pattern = ''
+    final_pattern = ''
+
+    if duration != 'None' and timeofday == 'None' and dayofweek == 'None':
+        pattern = duration_map[duration][0]+"_"+str(duration_map[duration][1])
+
+    if duration != 'None' and timeofday != 'None' and dayofweek == 'None':
+        pattern = duration_map[duration][0]+":"+time_of_day_map[timeofday][0]+"_"+str(duration_map[duration][1])+":"\
+                +str(time_of_day_map[timeofday][1])
+
+    if duration != 'None' and timeofday == 'None' and dayofweek != 'None':
+         pattern = duration_map[duration][0]+":"+day_of_week_map[dayofweek][0]+"_"+str(duration_map[duration][1])+":"\
+                +str(day_of_week_map[dayofweek][1])
+
+    if duration != 'None' and timeofday != 'None' and dayofweek != 'None':
+         pattern = duration_map[duration][0]+":"+day_of_week_map[dayofweek][0]+":"+time_of_day_map[timeofday][0]+"_"+str(duration_map[duration][1])+":"\
+                +str(day_of_week_map[dayofweek][1])+":"+str(time_of_day_map[timeofday][1])
+
+    final_pattern = id+","+pattern
+    return final_pattern
+
+
+
 
 

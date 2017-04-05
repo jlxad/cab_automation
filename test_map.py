@@ -5,6 +5,7 @@ import logging
 import sys
 reload(sys)
 import dill
+import os
 
 sys.setdefaultencoding('utf8')
 
@@ -66,10 +67,8 @@ class GetMap(unittest.TestCase):
     #     print response.json()['num_audience']
 
     def test_sample_1(self):
-         request = {"OR":{"brand":["1|1|1y|4|4","25|1|1y|3|1"]}}
-         segment_size_post(None,request,db_validation=True)
-         print get_result_from_dictionary_single_row_logical_operations("AND", request)
-
+         fileDir = os.path.dirname(os.path.realpath('__file__'))
+         print fileDir
 
 
 if __name__ == '__main__':

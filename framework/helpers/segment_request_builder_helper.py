@@ -18,9 +18,7 @@ def build_request_payload_for_segment_size_post(mtype,token_map):
                     if key == "direct" and (key1 == "brand" or key1 == "category"):
                         main_type = key1
                         val_list = value1[key][0].split("|")
-                        main_value= {"id":val_list[0],"minfreq":val_list[1],
-                                                  "duration": val_list[2],"timeofday":val_list[3],
-                                                  "dayofweek":val_list[4]}
+                        main_value= construct_main_val(val_list[0],val_list[1],val_list[2],val_list[3],val_list[4])
                 else:
                     if key is not "brand" and key is not "category":
                             main_value_list = []
@@ -40,9 +38,7 @@ def build_request_payload_for_segment_size_post(mtype,token_map):
                             i_list = i.split("|")
                             map = dict()
                             map['type'] = key
-                            map['value'] = {"id":i_list[0],"minfreq":i_list[1],
-                                      "duration": i_list[2],"timeofday":i_list[3],
-                                      "dayofweek":i_list[4]}
+                            map['value'] = construct_main_val(i_list[0],i_list[1],i_list[2],i_list[3],i_list[4])
                             value_list.append(map)
 
                        main_type = key1
@@ -77,9 +73,7 @@ def build_request_payload_for_segment_size_post(mtype,token_map):
                         if len(value) is 1:
                             dict1 = dict()
                             dict1['type'] = key1
-                            dict1['value'] = {"id": val_list[0], "minfreq": val_list[1],
-                                              "duration": val_list[2],"timeofday": val_list[3],
-                                              "dayofweek": val_list[4]}
+                            dict1['value'] = construct_main_val(val_list[0],val_list[1],val_list[2],val_list[3],val_list[4])
                             main_value.append(dict1)
 
                     elif key2 == "direct" and key1 == "category":
@@ -89,9 +83,7 @@ def build_request_payload_for_segment_size_post(mtype,token_map):
                         if len(value) is 1:
                             dict1 = dict()
                             dict1['type'] = key1
-                            dict1['value'] = {"id": val_list[0], "minfreq": val_list[1],
-                                              "duration": val_list[2], "timeofday": val_list[3],
-                                              "dayofweek": val_list[4]}
+                            dict1['value'] = construct_main_val(val_list[0],val_list[1],val_list[2],val_list[3],val_list[4])
                             main_value.append(dict1)
 
                     elif key2 == "nested" and key1 != "NOT":
@@ -145,9 +137,7 @@ def build_request_payload_for_segment_size_post(mtype,token_map):
                                 dict1['type'] = key1
                                 map = dict()
                                 map['type'] = key
-                                map['value'] = {"id":val_list[0],"minfreq":val_list[1],
-                                              "duration": val_list[2],"timeofday":val_list[3],
-                                              "dayofweek":val_list[4]}
+                                map['value'] = construct_main_val(val_list[0],val_list[1],val_list[2],val_list[3],val_list[4])
                                 dict1['value'] = map
                                 main_value.append(dict1)
                             else:
@@ -161,9 +151,7 @@ def build_request_payload_for_segment_size_post(mtype,token_map):
                                     i_list = i.split("|")
                                     map = dict()
                                     map['type'] = key
-                                    map['value'] = {"id":i_list[0],"minfreq":i_list[1],
-                                              "duration": i_list[2],"timeofday":i_list[3],
-                                              "dayofweek":i_list[4]}
+                                    map['value'] = construct_main_val(i_list[0],i_list[1],i_list[2],i_list[3],i_list[4])
                                     value_list.append(map)
                                 dict1['value'] = value_list
                                 main_value.append(dict1)
@@ -173,6 +161,24 @@ def build_request_payload_for_segment_size_post(mtype,token_map):
                     "value": main_value
               }
     return request
+
+
+def construct_main_val(val_0,val_1,val_2,val_3,val_4):
+   req = {"id":val_0,"minfreq":val_1,
+        "duration": val_2,"timeofday":val_3,
+        "dayofweek":val_4}
+   if val_0 == 'None':
+    del req["id"]
+   if val_1 == 'None':
+    del req["minfreq"]
+   if val_2 == 'None':
+    del req["duration"]
+   if val_3 == 'None':
+    del req["timeofday"]
+   if val_4 =='None':
+    del req["dayofweek"]
+
+   return req
 
 
 

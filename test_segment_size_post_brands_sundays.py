@@ -1,6 +1,7 @@
 import unittest
 from framework.helpers.segment_size_helper import *
 from framework.helpers.segment_size_helper import data_provider
+from config import *
 import logging
 
 logger = logging.getLogger("cab.tests.segmentSizePostBrandsSundayTests")
@@ -18,7 +19,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
         logger.info("Find users who visited kfc "+str(fre)+"times in last 6 months and on sunday and on mornings")
 
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|6m|1|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|6m|1|4"]}
 
         }
 
@@ -29,7 +30,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last 1 month and on sunday and on mornings")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1m|1|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1m|1|4"]}
 
         }
 
@@ -40,7 +41,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last 1 year and on sunday and on mornings")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1y|1|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1y|1|4"]}
 
         }
 
@@ -51,7 +52,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on sunday and on mornings")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1q|1|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|1|4"]}
 
         }
 
@@ -65,7 +66,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
         logger.info("Find users who visited kfc "+str(fre)+"times in last 6 months and on sunday and on afternoon")
 
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|6m|2|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|6m|2|4"]}
 
         }
 
@@ -76,7 +77,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last month and on sunday and on afternoon")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1m|2|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1m|2|4"]}
 
         }
 
@@ -87,7 +88,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last 1 year and on sunday and on afternoon")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1y|2|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1y|2|4"]}
         }
 
         segment_size_post(None,request,db_validation=True)
@@ -97,7 +98,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on sunday and on afternoon")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1q|2|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|2|4"]}
 
         }
 
@@ -112,7 +113,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
         logger.info("Find users who visited kfc "+str(fre)+"times in last 6 months and on sunday and on evening")
 
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|6m|3|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|6m|3|4"]}
 
         }
 
@@ -123,7 +124,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last month and on sunday and on evening")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1m|3|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1m|3|4"]}
 
         }
 
@@ -134,7 +135,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info(" Find users who visited kfc "+str(fre)+"times in last 1 year and on sunday and on evening")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1y|3|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1y|3|4"]}
 
         }
 
@@ -145,7 +146,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on sunday and on evening")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1q|3|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|3|4"]}
 
         }
 
@@ -160,7 +161,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
         logger.info("Find users who visited kfc "+str(fre)+"times in last 6 months and on sunday and on night")
 
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|6m|4|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|6m|4|4"]}
 
         }
 
@@ -171,7 +172,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last month and on sunday and on night")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1m|4|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1m|4|4"]}
 
         }
 
@@ -182,7 +183,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last 1 year and on sunday and on night")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1y|4|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1y|4|4"]}
 
         }
 
@@ -193,7 +194,7 @@ class SegmentSizePostBrandsSundayTests(unittest.TestCase):
 
         logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on sunday and on night")
         request = {
-            "brand": {"direct": ["1|"+str(fre)+"|1q|4|4"]}
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|4|4"]}
 
         }
 
