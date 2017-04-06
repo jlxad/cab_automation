@@ -7,7 +7,7 @@ import sys
 now = datetime.datetime.now()
 
 if len(sys.argv) > 2:
-    fileDir = "/media/ephemeral0/jenkins/workspace/CAB_Functional_Tests/cab_automation"
+    fileDir = "/media/ephemeral0/jenkins/workspace/CAB_Functional_Tests"
 else:
     fileDir = os.path.dirname(os.path.realpath('__file__'))
 
