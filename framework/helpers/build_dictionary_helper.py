@@ -2,8 +2,13 @@ import dill
 import random
 import datetime
 import os
+import sys
 
 now = datetime.datetime.now()
+
+if len(sys.argv) > 2:
+    fileDir = "/media/ephemeral0/jenkins/workspace/CAB_Functional_Tests/cab_automation"
+
 fileDir = os.path.dirname(os.path.realpath('__file__'))
 cur_year =now.year
 
@@ -11,8 +16,10 @@ state_list1 = ['ak','al','ar','az','ca','co','ct','dc','de','fl','ga','ia','id',
               'me','mi','mn','mo','ms','mt','nc','nd','ne','nh','nj','nm','nv','ny','oh','ok','or','pa','ri','sc',
               'sd','tn','tx','ut','va','vt','wa','wi','wv','wy','hi']
 
-state_list = ["al", "ak", "az", "ar","ca", "co", "ct", "de", "pr", "fl", "ga", "hi", "id", "gu","il", "in", "ia", "ks", "ky", "la", "me", "md", "ma", "vi","mi", "mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc", "nd",
-              "oh", "ok", "or", "pa", "ri", "sc", "sd", "tn","tx", "ut", "vt", "va","wa", "wv", "wi", "wy"]
+state_list = ['pa', 'az', 'fl', 'la', 'mt', 'gu', 'nm', 'ak', 'nc', 'or', 'vt', 'ms', 'ar', 'il', 'mo', 'in', 'hi', 'wy',
+  'ut', 'mi', 'ks', 'md', 'vi', 'ga', 'dc', 'mn', 'wi', 'ne', 'oh', 'ct', 'nv', 'pr', 'ok', 'al', 'ca', 'co', 'de', 'nd',
+  'wv', 'ky', 'wa', 'me', 'ri', 'sd', 'tn', 'va', 'nh', 'ia', 'sc', 'ny', 'ma', 'id', 'nj', 'tx']
+
 def create_dictionary_from_file(file_path):
 
     brand_map = dict()

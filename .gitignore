@@ -1,3 +1,13 @@
 .idea
 *.pyc
 .DS_Store
+dump.txt
+age.txt
+baud.txt
+brand.txt
+category.txt
+country.txt
+customaud.txt
+dma.txt
+gender.txt
+state.txt
