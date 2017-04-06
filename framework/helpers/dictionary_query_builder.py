@@ -12,8 +12,8 @@ if len(sys.argv) > 2:
 else:
     fileDir = os.path.dirname(os.path.realpath('__file__'))
 
-if len(sys.argv) > 4:
- create_dictionary_from_file(file_path=file_path)
+
+create_dictionary_from_file(file_path=file_path)
 
 country_map = dill.load(open(fileDir+"/resources/country.txt"))
 state_map = dill.load(open(fileDir+"/resources/state.txt"))
