@@ -8,8 +8,8 @@ now = datetime.datetime.now()
 
 if len(sys.argv) > 2:
     fileDir = "/media/ephemeral0/jenkins/workspace/CAB_Functional_Tests/cab_automation"
-
-fileDir = os.path.dirname(os.path.realpath('__file__'))
+else:
+    fileDir = os.path.dirname(os.path.realpath('__file__'))
 cur_year =now.year
 
 state_list1 = ['ak','al','ar','az','ca','co','ct','dc','de','fl','ga','ia','id','il','in','ks','ky','la','ma','md',

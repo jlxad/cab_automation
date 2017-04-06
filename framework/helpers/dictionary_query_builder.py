@@ -6,7 +6,10 @@ from framework.helpers.build_dictionary_helper import *
 from config import *
 logger = logging.getLogger("cab.helpers.dictionary_query_builder")
 
-fileDir = os.path.dirname(os.path.realpath('__file__'))
+if len(sys.argv) > 2:
+    fileDir = "/media/ephemeral0/jenkins/workspace/CAB_Functional_Tests/cab_automation"
+else:
+    fileDir = os.path.dirname(os.path.realpath('__file__'))
 
 if len(sys.argv) > 4:
  create_dictionary_from_file(file_path=file_path)
