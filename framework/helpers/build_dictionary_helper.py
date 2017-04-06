@@ -279,7 +279,6 @@ def create_dictionary_from_file(file_path):
                     else:
                         gender_map['unknown'].add(line[0])
 
-
     # serialize the brand map
     dill.dump(brand_map,open(fileDir+"/resources/brand.txt","w"),-1)
 
