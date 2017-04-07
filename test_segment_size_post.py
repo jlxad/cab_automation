@@ -39,7 +39,7 @@ class SegmentSizePostTests(unittest.TestCase):
         segment_size_post(None,request,db_validation=True)
 
 
-    ##################### States ######################################
+     ##################### States ######################################
 
     # Find users who live in California
     def test_users_in_state_ca(self):
@@ -756,11 +756,11 @@ class SegmentSizePostTests(unittest.TestCase):
         logger.info("### Usecase:Find users who live in country US and belong to custom audience seg='94167' or seg='93767 ###")
         request = {
             "country": {"direct": ["us"]},
-            "OR": {"segment": ["94167","93767"]}
+            "OR": {"segment": ["336455","336460"]}
         }
 
         aud_response = segment_size_post("AND",request,db_validation=False)
-        union = customaud_map['94167'] | customaud_map['93767']
+        union = customaud_map['336455'] | customaud_map['336460']
         intersect = union & country_map['us']
         self.assertEqual(aud_response,len(intersect))
 
@@ -770,13 +770,13 @@ class SegmentSizePostTests(unittest.TestCase):
         logger.info("### Usecase:Find users who live in country US and belong to custom audience seg='94167' and not seg='93767' ###")
         request = {
             "country": {"direct": ["us"]},
-            "segment": {"direct": ["94167"]},
-            "NOT": {"segment": ["93767"]}
+            "segment": {"direct": ["336455"]},
+            "NOT": {"segment": ["336460"]}
         }
 
         aud_response = segment_size_post("AND",request,db_validation=False)
-        intersect = country_map['us'] & customaud_map['94167']
-        diff = intersect-customaud_map['93767']
+        intersect = country_map['us'] & customaud_map['336455']
+        diff = intersect-customaud_map['336460']
         self.assertEqual(aud_response,len(diff))
 
     #Usecase: Find users who live in country US and belong to custom audience seg='214991' and seg='214996'
