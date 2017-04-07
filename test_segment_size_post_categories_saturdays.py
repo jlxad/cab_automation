@@ -166,7 +166,6 @@ class SegmentSizePostCategorySaturdayTests(unittest.TestCase):
             "category": {"direct": ["581208|"+str(fre)+"|6m|4|3"]}
 
         }
-
         segment_size_post(None, request, db_validation=True)
 
      @data_provider(freq)
@@ -177,7 +176,6 @@ class SegmentSizePostCategorySaturdayTests(unittest.TestCase):
             "category": {"direct": ["581208|"+str(fre)+"|1m|4|3"]}
 
         }
-
         segment_size_post(None, request, db_validation=True)
 
      @data_provider(freq)
@@ -220,9 +218,9 @@ class SegmentSizePostCategorySaturdayTests(unittest.TestCase):
      @data_provider(freq)
      def test_user_visit_restaurants_of_freq_x_in_last_year(self,fre):
 
-        logger.info("Find users who visited restaurants "+str(fre)+"times in last quarter")
+        logger.info("Find users who visited restaurants "+str(fre)+"times in last year")
         request = {
-            "brand": {"direct": [category_id+"|"+str(fre)+"|1y|None|None"]}
+            "category": {"direct": [category_id+"|"+str(fre)+"|1y|None|None"]}
 
         }
 
@@ -233,7 +231,7 @@ class SegmentSizePostCategorySaturdayTests(unittest.TestCase):
 
         logger.info("Find users who visited restaurants "+str(fre)+"times in last month")
         request = {
-            "brand": {"direct": [category_id+"|"+str(fre)+"|1m|None|None"]}
+            "category": {"direct": [category_id+"|"+str(fre)+"|1m|None|None"]}
 
         }
 
@@ -244,7 +242,7 @@ class SegmentSizePostCategorySaturdayTests(unittest.TestCase):
 
         logger.info("Find users who visited restaurants "+str(fre)+"times in last 6 months")
         request = {
-            "brand": {"direct": [category_id+"|"+str(fre)+"|6m|None|None"]}
+            "category": {"direct": [category_id+"|"+str(fre)+"|6m|None|None"]}
 
         }
 
