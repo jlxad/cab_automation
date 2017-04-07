@@ -1,7 +1,6 @@
 import unittest
 from framework.helpers.segment_size_helper import *
 from framework.helpers.prod_data_validation_helper import *
-from framework.helpers.prod_data_validation_helper import t
 import logging
 
 logger = logging.getLogger("cab.tests.ProductionTests")
@@ -1098,16 +1097,15 @@ class ProductionTests(unittest.TestCase):
                     "type": "OR",
                     "value": [{
                         "type": "brand",
-                        "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"}
+                        "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"},
                     }, {
                         "type": "behavior",
                         "value": "go"
                     },
                         {
                         "type": "category",
-                        "value": {
-                            "id": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
-                        }
+                        "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"},
+
                     }
                         ]
                 }
@@ -1574,6 +1572,7 @@ class ProductionTests(unittest.TestCase):
      logger.info("################## Query Results ######################")
      logger.info("#######################################################")
      print t.draw()
+
 
 
 

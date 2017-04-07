@@ -1,11 +1,9 @@
 import datetime
 from framework.helpers.mysql_helper import *
-from prettytable import PrettyTable
 from texttable import Texttable
 
 t= Texttable()
 t.add_row(['Query', 'Previous_build_count', 'New_build_count', 'Difference_in_Count'])
-
 
 def verify_data_in_db_helper(count, query_number, desc_query):
 

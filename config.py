@@ -18,7 +18,7 @@ else:
 
 API_URL= "http://ec2-35-163-23-118.us-west-2.compute.amazonaws.com:8050"
 
-brand_id = "25"
+brand_id = "1"
 category_id= "581208"
 
 
