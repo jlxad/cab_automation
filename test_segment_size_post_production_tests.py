@@ -17,7 +17,10 @@ class ProductionTests(unittest.TestCase):
 
      query = "Find users who lives in country US"
      logger.info("### Usecase:"+str(query)+" ###")
-     count = segment_size_post_single_object("country","us",db_validation=False)
+     request = {
+            "country": {"direct": ["us"]}
+        }
+     count = segment_size_post(None,request,db_validation=False)
      verify_data_in_db_helper(count,"1",query)
 
  ## Find users who live in UK ##
@@ -25,7 +28,10 @@ class ProductionTests(unittest.TestCase):
 
      query = "Find users who lives in country UK"
      logger.info("### Usecase:"+str(query)+" ###")
-     count = segment_size_post_single_object("country","gb",db_validation=False)
+     request = {
+            "country": {"direct": ["gb"]}
+        }
+     count = segment_size_post(None,request,db_validation=False)
      verify_data_in_db_helper(count,"2",query)
 
  ###################################### Gender & Country ##########################################
@@ -56,6 +62,19 @@ class ProductionTests(unittest.TestCase):
      count = segment_size_post("AND",request,db_validation=False)
      verify_data_in_db_helper(count,"4",query)
 
+ ## Find users who live in US and of gender unknown ##
+ def test_users_in_us_and_unknown(self):
+
+     query = "Find users who lives in country US and of gender unknown"
+     logger.info("### Usecase:"+str(query)+" ###")
+     request = {
+              "gender":{"direct":["u"]},
+              "country":{"direct":["us"]}
+         }
+
+     count = segment_size_post("AND",request,db_validation=False)
+     verify_data_in_db_helper(count,"5",query)
+
  ## Find users who live in UK and of gender male ##
  def test_users_in_uk_and_male(self):
 
@@ -67,7 +86,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"5",query)
+     verify_data_in_db_helper(count,"6",query)
 
  ## Find users who live in UK and of gender female ##
  def test_users_in_uk_and_female(self):
@@ -80,7 +99,20 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"6",query)
+     verify_data_in_db_helper(count,"7",query)
+
+ ## Find users who live in UK and of gender unknown ##
+ def test_users_in_uk_and_unknown(self):
+
+     query = "Find users who lives in country UK and of gender unknown"
+     logger.info("### Usecase:"+str(query)+" ###")
+     request = {
+              "gender":{"direct":["u"]},
+              "country":{"direct":["gb"]}
+         }
+
+     count = segment_size_post("AND",request,db_validation=False)
+     verify_data_in_db_helper(count,"8",query)
 
  ###################################### Age & Country - US  ##########################################
 
@@ -94,7 +126,7 @@ class ProductionTests(unittest.TestCase):
           "age":{"direct":[1]}}
 
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"7",query)
+    verify_data_in_db_helper(count,"9",query)
 
  ## Find users who live in US and of age 18-24 ##
  def test_users_in_us_and_age_18_to_24(self):
@@ -108,7 +140,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"8",query)
+     verify_data_in_db_helper(count,"10",query)
 
  ## Find users who live in US and of age 25-34 ##
  def test_users_in_us_and_age_25_to_34(self):
@@ -122,7 +154,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"9",query)
+     verify_data_in_db_helper(count,"11",query)
 
  ## Find users who live in US and of age 35-44 ##
  def test_users_in_us_and_age_35_to_44(self):
@@ -136,7 +168,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"10",query)
+     verify_data_in_db_helper(count,"12",query)
 
  ## Find users who live in US and of age 45-54 ##
  def test_users_in_us_and_age_45_to_54(self):
@@ -150,7 +182,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"11",query)
+     verify_data_in_db_helper(count,"13",query)
 
  ## Find users who live in US and of age 55-64 ##
  def test_users_in_us_and_age_55_to_64(self):
@@ -164,7 +196,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"12",query)
+     verify_data_in_db_helper(count,"14",query)
 
  ## Find users who live in US and of age more than 65 ##
  def test_users_in_us_and_age_greater_than_65(self):
@@ -178,7 +210,21 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"13",query)
+     verify_data_in_db_helper(count,"15",query)
+
+ ## Find users who live in US and of unknown age ##
+ def test_users_in_us_and_unknown_age(self):
+
+     query = "Find users who lives in country us and of unknown age"
+     logger.info("### Usecase:"+str(query)+" ###")
+
+     request = {
+              "country":{"direct":["us"]},
+              "age":{"direct":['u']}
+     }
+
+     count = segment_size_post("AND",request,db_validation=False)
+     verify_data_in_db_helper(count,"16",query)
 
 ###################################### Age & Country - GB ##########################################
 
@@ -192,7 +238,7 @@ class ProductionTests(unittest.TestCase):
           "age":{"direct":[1]}}
 
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"14",query)
+    verify_data_in_db_helper(count,"17",query)
 
  ## Find users who live in GB and of age 18-24 ##
  def test_users_in_gb_and_age_18_to_24(self):
@@ -206,7 +252,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"15",query)
+     verify_data_in_db_helper(count,"18",query)
 
  ## Find users who live in GB and of age 25-34 ##
  def test_users_in_gb_and_age_25_to_34(self):
@@ -220,7 +266,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"16",query)
+     verify_data_in_db_helper(count,"19",query)
 
  ## Find users who live in gb and of age 35-44 ##
  def test_users_in_gb_and_age_35_to_44(self):
@@ -234,7 +280,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"17",query)
+     verify_data_in_db_helper(count,"20",query)
 
  ## Find users who live in gb and of age 45-54 ##
  def test_users_in_gb_and_age_45_to_54(self):
@@ -248,7 +294,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"18",query)
+     verify_data_in_db_helper(count,"21",query)
 
  ## Find users who live in gb and of age 55-64 ##
  def test_users_in_gb_and_age_55_to_64(self):
@@ -262,7 +308,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"19",query)
+     verify_data_in_db_helper(count,"22",query)
 
  ## Find users who live in gb and of age more than 65 ##
  def test_users_in_gb_and_age_greater_than_65(self):
@@ -276,7 +322,21 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"20",query)
+     verify_data_in_db_helper(count,"23",query)
+
+ ## Find users who live in gb and of unknown age ##
+ def test_users_in_gb_and_age_unknown(self):
+
+     query = "Find users who lives in country gb and of unknown age"
+     logger.info("### Usecase:"+str(query)+" ###")
+
+     request = {
+              "country":{"direct":["gb"]},
+              "age":{"direct":['u']}
+     }
+
+     count = segment_size_post("AND",request,db_validation=False)
+     verify_data_in_db_helper(count,"24",query)
 
  ######################## Brands & Categories #############################
 
@@ -287,11 +347,11 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["1"]},
+              "brand": {"direct": ["1|1|1y|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"21",query)
+    verify_data_in_db_helper(count,"25",query)
 
   # Find users who live in US and visited Burger King
  def test_users_in_usa_and_visited_burger_king(self):
@@ -301,10 +361,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand":{"direct":["2"]}
+              "brand": {"direct": ["2|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"22",query)
+    verify_data_in_db_helper(count,"26",query)
 
   # Find users who live in US and visited Home Depot
  def test_users_in_us_and_visited_home_depot(self):
@@ -313,11 +373,11 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["8"]},
+              "brand": {"direct": ["8|1|1y|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"23",query)
+    verify_data_in_db_helper(count,"27",query)
 
  # Find users who live in US and visited Walmart Supercenter
  def test_users_in_us_and_visited_walmart_supercenter(self):
@@ -326,11 +386,11 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["282"]},
+             "brand": {"direct": ["282|1|1y|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"24",query)
+    verify_data_in_db_helper(count,"28",query)
 
  # Find users who live in US and visited target
  def test_users_in_usa_and_visited_target(self):
@@ -340,10 +400,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand":{"direct":["10"]}
+             "brand": {"direct": ["10|1|1y|None|None"]},
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"25",query)
+    verify_data_in_db_helper(count,"29",query)
 
  # Find users who live in US and visited mcdonalds
  def test_users_in_us_and_visited_mcdonalds(self):
@@ -352,11 +412,11 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["25"]},
+              "brand": {"direct": ["25|1|1y|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"26",query)
+    verify_data_in_db_helper(count,"30",query)
 
  # Find users who live in US and visited taco bell
  def test_users_in_us_and_visited_taco_bell(self):
@@ -365,11 +425,11 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["48"]},
+             "brand": {"direct": ["48|1|1y|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"27",query)
+    verify_data_in_db_helper(count,"31",query)
 
  # Find users who live in US and visited Costco
  def test_users_in_usa_and_visited_costco(self):
@@ -379,10 +439,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand":{"direct":["32"]}
+              "brand": {"direct": ["32|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"28",query)
+    verify_data_in_db_helper(count,"32",query)
 
  # Find users who live in US and visited walmart
  def test_users_in_usa_and_visited_walmart(self):
@@ -392,10 +452,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand":{"direct":["9"]}
+              "brand": {"direct": ["9|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"29",query)
+    verify_data_in_db_helper(count,"33",query)
 
  # Find users who live in US and belong to category "Automobile Dealers-New Cars"
  def test_users_in_usa_and_category_automobile_dealers_new_cars(self):
@@ -405,10 +465,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["l:551102"]}
+              "category":{"direct":["551102|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"30",query)
+    verify_data_in_db_helper(count,"34",query)
 
  # Find users who live in US and belong to category "Restaurants"
  def test_users_in_usa_and_category_restaurants(self):
@@ -418,10 +478,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["l:581208"]}
+              "category":{"direct":["581208|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"31",query)
+    verify_data_in_db_helper(count,"35",query)
 
  # Find users who live in US and belong to category "Department Stores"
  def test_users_in_usa_and_category_department_stores(self):
@@ -431,10 +491,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["l:531102"]}
+              "category":{"direct":["531102|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"32",query)
+    verify_data_in_db_helper(count,"36",query)
 
  # Find users who live in US and belong to category "Pharmacies"
  def test_users_in_usa_and_category_pharmacies(self):
@@ -444,10 +504,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["l:591205"]}
+              "category":{"direct":["591205|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"33",query)
+    verify_data_in_db_helper(count,"37",query)
 
 
  ######################## Country & State #############################
@@ -463,7 +523,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"34",query)
+     verify_data_in_db_helper(count,"38",query)
 
  ## Find users who live in US and belong to state "ny" ##
  def test_users_in_us_and_in_new_york(self):
@@ -476,7 +536,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"35",query)
+     verify_data_in_db_helper(count,"39",query)
 
  ## Find users who live in US and belong to state "tx" ##
  def test_users_in_us_and_in_texas(self):
@@ -489,7 +549,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"36",query)
+     verify_data_in_db_helper(count,"40",query)
 
  ######################## Country & State & DMA #############################
 
@@ -505,7 +565,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"37",query)
+     verify_data_in_db_helper(count,"41",query)
 
  ## Find users who live in US and belong to state "ca" and dma "san francisco" ##
  def test_users_in_us_and_in_california_and_in_dma_san_francisco(self):
@@ -519,7 +579,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"38",query)
+     verify_data_in_db_helper(count,"42",query)
 
  ## Find users who live in US and belong to state "ny" and dma "new york" ##
  def test_users_in_us_and_in_new_york_and_dma_new_york(self):
@@ -533,7 +593,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"39",query)
+     verify_data_in_db_helper(count,"43",query)
 
  ######################## Countries & Behavioural Audiences #############################
 
@@ -548,7 +608,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"40",query)
+     verify_data_in_db_helper(count,"44",query)
 
  ## Find users who live in US and belong to millennials ##
  def test_users_in_us_and_millennials(self):
@@ -561,7 +621,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"41",query)
+     verify_data_in_db_helper(count,"45",query)
 
  ## Find users who live in US and belong to soccer moms ##
  def test_users_in_us_and_soccer_moms(self):
@@ -574,7 +634,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"42",query)
+     verify_data_in_db_helper(count,"46",query)
 
  ## Find users who live in US and belong to hispanics ##
  def test_users_in_us_and_hispanics(self):
@@ -587,7 +647,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"43",query)
+     verify_data_in_db_helper(count,"47",query)
 
  ## Find users who live in US and belong to sportsenthusiasts ##
  def test_users_in_us_and_sportsenthusiasts(self):
@@ -600,7 +660,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"44",query)
+     verify_data_in_db_helper(count,"48",query)
 
  ## Find users who live in US and belong to commuters ##
  def test_users_in_us_and_commuters(self):
@@ -613,7 +673,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"45",query)
+     verify_data_in_db_helper(count,"49",query)
 
  ## Find users who live in US and belong to diys ##
  def test_users_in_us_and_diys(self):
@@ -626,7 +686,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"46",query)
+     verify_data_in_db_helper(count,"50",query)
 
  ## Find users who live in US and belong to golfers ##
  def test_users_in_us_and_golfers(self):
@@ -639,7 +699,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"47",query)
+     verify_data_in_db_helper(count,"51",query)
 
  ## Find users who live in US and belong to dad ##
  def test_users_in_us_and_dad(self):
@@ -652,7 +712,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"48",query)
+     verify_data_in_db_helper(count,"52",query)
 
  ## Find users who live in US and belong to in market for carriers ##
  def test_users_in_us_and_inmarket_for_carriers(self):
@@ -665,7 +725,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"49",query)
+     verify_data_in_db_helper(count,"53",query)
 
  ## Find users who live in US and belong to big city moms ##
  def test_users_in_us_and_big_city_moms(self):
@@ -678,7 +738,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"50",query)
+     verify_data_in_db_helper(count,"54",query)
 
  ## Find users who live in US and belong to in market for furnitures ##
  def test_users_in_us_and_in_market_for_furnitures(self):
@@ -691,7 +751,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"51",query)
+     verify_data_in_db_helper(count,"55",query)
 
  ## Find users who live in Canada and are soccermoms ##
  def test_users_in_cn_and_are_soccermoms(self):
@@ -704,7 +764,7 @@ class ProductionTests(unittest.TestCase):
          }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"52",query)
+     verify_data_in_db_helper(count,"56",query)
 
  ######################## Combinations #############################
 
@@ -720,7 +780,7 @@ class ProductionTests(unittest.TestCase):
               "gender":{"direct":["f"]}
                }
     count =  segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"53",query)
+    verify_data_in_db_helper(count,"57",query)
 
  ## Find users who live in US and belong to soccer moms and of gender male ##
  def test_users_in_usa_and_soccer_moms_and_gender_male(self):
@@ -734,7 +794,7 @@ class ProductionTests(unittest.TestCase):
               "gender":{"direct":["m"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"54",query)
+    verify_data_in_db_helper(count,"58",query)
 
  ## Find users who live in US and belong to soccer moms and dad ##
  def test_users_in_usa_and_soccer_moms_and_dad(self):
@@ -747,7 +807,7 @@ class ProductionTests(unittest.TestCase):
               "country":{"direct":["us"]},
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"55",query)
+    verify_data_in_db_helper(count,"59",query)
 
  ## Find users who live in US and visited Home Depot and of gender male ##
  def test_users_in_usa_and_visited_home_depot_and_gender_male(self):
@@ -756,12 +816,12 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["8"]},
+              "brand":{"direct":["8|1|1y|None|None"]},
               "country":{"direct":["us"]},
               "gender":{"direct":["m"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"56",query)
+    verify_data_in_db_helper(count,"60",query)
 
  ## Find users who live in US and visited Home Depot and of gender female ##
  def test_users_in_usa_and_visited_home_depot_and_gender_female(self):
@@ -770,12 +830,12 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["8"]},
+              "brand":{"direct":["8|1|1y|None|None"]},
               "country":{"direct":["us"]},
               "gender":{"direct":["f"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"57",query)
+    verify_data_in_db_helper(count,"61",query)
 
  ## Find users who live in US and visited Costco and visited target ##
  def test_users_in_usa_and_visited_costco_and_target(self):
@@ -785,10 +845,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "AND":{"brand":["32","10"]}
+              "AND":{"brand":["32|1|1y|None|None","10|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"58",query)
+    verify_data_in_db_helper(count,"62",query)
 
  ## Find users who live in US and visited target and visited departmental stores ##
  def test_users_in_usa_and_visited_target_and_visited_departmental_stores(self):
@@ -798,11 +858,11 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand":{"direct":["10"]},
-              "category":{"direct":["l:531102"]}
+              "brand":{"direct":["10|1|1y|None|None"]},
+              "category":{"direct":["531102|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"59",query)
+    verify_data_in_db_helper(count,"63",query)
 
  ## Find users who live in US and visited KFC and visited Taco Bell and visited mcdonalds ##
  def test_users_in_usa_and_visited_kfc_and_taco_and_mcdonalds(self):
@@ -812,10 +872,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "AND":{"brand":["1","48","25"]}
+              "AND":{"brand":["1|1|1y|None|None", "48|1|1y|None|None","25|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"60",query)
+    verify_data_in_db_helper(count,"64",query)
 
  ## Find users who live in US and visited kfc and taco bell ##
  def test_users_in_usa_and_visited_kfc_and_taco(self):
@@ -825,10 +885,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "AND":{"brand":[1,48]}
+              "AND":{"brand":["1|1|1y|None|None", "48|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"61",query)
+    verify_data_in_db_helper(count,"65",query)
 
  ## Find users who live in US and visited KFC or visited Taco Bell ##
  def test_users_in_usa_and_visited_kfc_or_taco(self):
@@ -838,10 +898,10 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "OR":{"brand":["1","48"]}
+              "OR":{"brand":["1|1|1y|None|None", "48|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"62",query)
+    verify_data_in_db_helper(count,"66",query)
 
  ## Find users who live in US and belong to business Traveler and visited kfc ##
  def test_users_in_usa_and_business_travellers_and_visited_kfc(self):
@@ -851,10 +911,10 @@ class ProductionTests(unittest.TestCase):
     request = {
               "country":{"direct":["us"]},
               "behavior":{"direct":["bt"]},
-              "brand":{"direct":["1"]}
+              "brand":{"direct":["1|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"63",query)
+    verify_data_in_db_helper(count,"67",query)
 
  ## Find users who live in US and belong to business Traveler and not visited kfc ##
  def test_users_in_usa_and_business_travellers_and_not_visited_kfc(self):
@@ -864,10 +924,10 @@ class ProductionTests(unittest.TestCase):
     request = {
               "country":{"direct":["us"]},
               "behavior":{"direct":["bt"]},
-              "NOT":{"brand":["1"]}
+              "NOT":{"brand":["1|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"64",query)
+    verify_data_in_db_helper(count,"68",query)
 
  ## Find users who live in US and belong to Soccer Moms and who visited Target ##
  def test_users_in_usa_and_soccer_moms_and_visted_target(self):
@@ -877,10 +937,10 @@ class ProductionTests(unittest.TestCase):
     request = {
               "behavior":{"direct":["soccermoms"]},
               "country":{"direct":["us"]},
-              "brand":{"direct":["10"]}
+              "brand":{"direct":["10|1|1y|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
-    verify_data_in_db_helper(count,"65",query)
+    verify_data_in_db_helper(count,"69",query)
 
  ## Find users who live in US and belong to Soccer Moms OR who visited target ##
  def test_users_in_usa_and_soccermoms_or_visited_target(self):
@@ -891,7 +951,7 @@ class ProductionTests(unittest.TestCase):
     request = {"type" : "AND" , "value" : [
                                            {"type" : "country" , "value" : "us" } ,
                                            {"type" : "OR", "value" : [
-                                                                                   { "type" : "brand" , "value" : {"id": 10} } ,
+                                                                                   { "type" : "brand" , "value" : {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"} } ,
                                                                                    { "type" : "behavior" , "value" : "soccermoms" }
                                                                                  ]
                                            }
@@ -907,7 +967,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"66",query)
+    verify_data_in_db_helper(count,"70",query)
 
  ## Find users who live in US and belong to Soccer Moms but not visited target ##
  def test_users_in_usa_and_soccermoms_not_visited_target(self):
@@ -919,7 +979,7 @@ class ProductionTests(unittest.TestCase):
         "type": "AND",
         "value": [{"type": "country","value": "us"},
                   {"type": "AND","value": [{"type": "behavior","value": "soccermoms"},
-                                           {"type": "NOT","value": {"type": "brand","value": {"id": 10}}}
+                                           {"type": "NOT","value": {"type": "brand","value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}}
                                            ]
                   }]
     }
@@ -932,7 +992,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"67",query)
+    verify_data_in_db_helper(count,"71",query)
 
  ################# Test cases to verify the operations on the application ######################
 
@@ -967,7 +1027,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"68",query)
+    verify_data_in_db_helper(count,"72",query)
 
  def test_country_and_or_between_states_and_dmas(self):
 
@@ -994,7 +1054,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"69",query)
+    verify_data_in_db_helper(count,"73",query)
 
  def test_country_and_or_between_states_and_dmas_and_not_dma(self):
 
@@ -1022,7 +1082,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"70",query)
+    verify_data_in_db_helper(count,"74",query)
 
  def test_brands_or_categ_or_behaviours_and_country_us(self):
 
@@ -1038,9 +1098,7 @@ class ProductionTests(unittest.TestCase):
                     "type": "OR",
                     "value": [{
                         "type": "brand",
-                        "value": {
-                            "id": 9
-                        }
+                        "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"}
                     }, {
                         "type": "behavior",
                         "value": "go"
@@ -1048,7 +1106,7 @@ class ProductionTests(unittest.TestCase):
                         {
                         "type": "category",
                         "value": {
-                            "id": "581208"
+                            "id": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
                         }
                     }
                         ]
@@ -1064,7 +1122,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"71",query)
+    verify_data_in_db_helper(count,"75",query)
 
 
  def test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_age_and_exclude_dma_and_exclude_brand(self):
@@ -1082,18 +1140,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "AND",
                             "value": [{
                                 "type": "brand",
-                                "value": {
-                                    "id": 9
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {
-                                    "id": "581208"
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1113,7 +1167,7 @@ class ProductionTests(unittest.TestCase):
 
                             {
                                 "type": "NOT",
-                                "value":{"type":"brand","value":{"id": 10}}
+                                "value":{"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
 
                             },
                             {
@@ -1131,7 +1185,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"72",query)
+    verify_data_in_db_helper(count,"76",query)
 
  def test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_age_and_exclude_dma_and_exclude_brand(self):
 
@@ -1157,9 +1211,7 @@ class ProductionTests(unittest.TestCase):
                             },
                                 {
                                 "type": "category",
-                                "value": {
-                                    "id": "581208"
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1179,7 +1231,7 @@ class ProductionTests(unittest.TestCase):
 
                             {
                                 "type": "NOT",
-                                "value":{"type":"brand","value":{"id": 10}}
+                                "value":{"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
 
                             },
                             {
@@ -1197,7 +1249,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"73",query)
+    verify_data_in_db_helper(count,"77",query)
 
  def test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand(self):
 
@@ -1214,18 +1266,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "AND",
                             "value": [{
                                 "type": "brand",
-                                "value": {
-                                    "id": 9
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {
-                                    "id": "581208"
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1245,7 +1293,7 @@ class ProductionTests(unittest.TestCase):
 
                             {
                                 "type": "NOT",
-                                "value":{"type":"brand","value":{"id": 10}}
+                                "value":{"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
 
                             },
                             {
@@ -1263,7 +1311,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"74",query)
+    verify_data_in_db_helper(count,"78",query)
 
  def test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior(self):
 
@@ -1280,18 +1328,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "AND",
                             "value": [{
                                 "type": "brand",
-                                "value": {
-                                    "id": 9
-                                }
+                                "value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {
-                                    "id": "581208"
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1310,7 +1354,7 @@ class ProductionTests(unittest.TestCase):
                             },
 
                             {
-                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"id": 10}}},
+                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
                                                       { "type": "NOT","value": {"type":"behavior","value":"bt"}}]
 
 
@@ -1330,7 +1374,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"75",query)
+    verify_data_in_db_helper(count,"79",query)
 
  def test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior(self):
 
@@ -1347,18 +1391,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "OR",
                             "value": [{
                                 "type": "brand",
-                                "value": {
-                                    "id": 9
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {
-                                    "id": "581208"
-                                }
+                                "value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1377,7 +1417,7 @@ class ProductionTests(unittest.TestCase):
                             },
 
                             {
-                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"id": 10}}},
+                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
                                                       { "type": "NOT","value": {"type":"behavior","value":"bt"}}]
 
 
@@ -1397,7 +1437,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"76",query)
+    verify_data_in_db_helper(count,"80",query)
 
  ## Find users who live in US and of segment s1 and of not segment s2 and (seg s3 or seg s4) ##
  def test_users_in_us_and_or_not_and_between_segments(self):
@@ -1414,7 +1454,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"77",query)
+     verify_data_in_db_helper(count,"81",query)
 
  def test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior_include_and_exclude_segment(self):
 
@@ -1431,18 +1471,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "OR",
                             "value": [{
                                 "type": "brand",
-                                "value": {
-                                    "id": 9
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {
-                                    "id": "581208"
-                                }
+                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1461,7 +1497,7 @@ class ProductionTests(unittest.TestCase):
                             },
 
                             {
-                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"id": 10}}},
+                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
                                                       { "type": "NOT","value": {"type":"behavior","value":"bt"}}]
 
 
@@ -1489,7 +1525,7 @@ class ProductionTests(unittest.TestCase):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
     count = response.json()['num_audience']
-    verify_data_in_db_helper(count,"78",query)
+    verify_data_in_db_helper(count,"82",query)
 
  ## Find users who live in US and are female and are stay at homes ##
  def test_users_in_us_and_stay_at_mom_and_are_female(self):
@@ -1503,7 +1539,7 @@ class ProductionTests(unittest.TestCase):
      }
 
      count = segment_size_post("AND",request,db_validation=False)
-     verify_data_in_db_helper(count,"79",query)
+     verify_data_in_db_helper(count,"83",query)
 
  ## Find users who dont have a country ##
  def test_users_who_dont_have_country(self):
@@ -1527,7 +1563,7 @@ class ProductionTests(unittest.TestCase):
      final_count = int(count1) - int(count2)
      logger.info("Users who dont have country: "+str(final_count))
 
-     verify_data_in_db_helper(final_count,"80",query)
+     verify_data_in_db_helper(final_count,"84",query)
 
 
 
