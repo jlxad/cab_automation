@@ -282,14 +282,14 @@ class ProductionTests(unittest.TestCase):
      count = segment_size_post("AND",request,db_validation=False)
      verify_data_in_db_helper(count,"20",query)
 
- ## Find users who live in gb and of age 45-54 ##
+ # Find users who live in gb and of age 45-54 ##
  def test_users_in_gb_and_age_45_to_54(self):
 
      query = "Find users who lives in country gb and of age 45-54"
      logger.info("### Usecase:"+str(query)+" ###")
 
      request = {
-              "country":{"direct":["us"]},
+              "country":{"direct":["gb"]},
               "age":{"direct":[5]}
      }
 
@@ -553,43 +553,43 @@ class ProductionTests(unittest.TestCase):
 
  ######################## Country & State & DMA #############################
 
- ## Find users who live in US and belong to state "ca" and dma "los angeles" ##
- def test_users_in_us_and_in_california_and_in_dma_los_angeles(self):
+ ## Find users who live in US and belong to state "ca" and exclude dma "los angeles" ##
+ def test_users_in_us_and_in_california_and_exclude_dma_los_angeles(self):
 
-     query = "Find users who lives in country US and of state california and in dma los angeles"
+     query = "Find users who lives in country US and of state california and exclude dma los angeles"
      logger.info("### Usecase:"+str(query)+" ###")
      request = {
               "state":{"direct":["ca"]},
               "country":{"direct":["us"]},
-              "dma":{"direct":[803]}
+              "NOT":{"dma":[803]}
          }
 
      count = segment_size_post("AND",request,db_validation=False)
      verify_data_in_db_helper(count,"41",query)
 
- ## Find users who live in US and belong to state "ca" and dma "san francisco" ##
- def test_users_in_us_and_in_california_and_in_dma_san_francisco(self):
+ ## Find users who live in US and belong to state "ca" and exclude dma "san francisco" ##
+ def test_users_in_us_and_in_california_and_exclude_dma_san_francisco(self):
 
-     query = "Find users who lives in country US and of state california and in dma san francisco"
+     query = "Find users who lives in country US and of state california and exclude dma san francisco"
      logger.info("### Usecase:"+str(query)+" ###")
      request = {
               "state":{"direct":["ca"]},
               "country":{"direct":["us"]},
-              "dma":{"direct":[807]}
+              "NOT":{"dma":[807]}
          }
 
      count = segment_size_post("AND",request,db_validation=False)
      verify_data_in_db_helper(count,"42",query)
 
- ## Find users who live in US and belong to state "ny" and dma "new york" ##
- def test_users_in_us_and_in_new_york_and_dma_new_york(self):
+ ## Find users who live in US and belong to state "ny" and exclude dma "new york" ##
+ def test_users_in_us_and_in_new_york_and_exclude_dma_new_york(self):
 
-     query = "Find users who lives in country US and of state New York and of dma New York"
+     query = "Find users who lives in country US and of state New York and exclude dma New York"
      logger.info("### Usecase:"+str(query)+" ###")
      request = {
               "state":{"direct":["ny"]},
               "country":{"direct":["us"]},
-              "dma":{"direct":[501]}
+              "NOT":{"dma":[501]}
          }
 
      count = segment_size_post("AND",request,db_validation=False)

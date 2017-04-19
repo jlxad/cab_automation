@@ -58,6 +58,17 @@ class SegmentSizePostBrandsSaturdayTests(unittest.TestCase):
 
         segment_size_post(None, request, db_validation=True)
 
+     @data_provider(freq)
+     def test_user_visit_kfc_of_freq_x_in_last_quarter_on_anydays_morning(self,fre):
+
+        logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on anydays and on mornings")
+        request = {
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|1|None"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
      ################################### Brand Combination - freq-(1,5,10),duration(all combs), timeofday-afternoon, dayofweek-saturday ######################################
 
      @data_provider(freq)
@@ -99,6 +110,17 @@ class SegmentSizePostBrandsSaturdayTests(unittest.TestCase):
         logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on saturday and on afternoon")
         request = {
             "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|2|3"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
+     @data_provider(freq)
+     def test_user_visit_kfc_of_freq_x_in_last_quarter_on_anydays_afternoon(self,fre):
+
+        logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on anydays and on afternoon")
+        request = {
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|2|None"]}
 
         }
 
@@ -152,6 +174,17 @@ class SegmentSizePostBrandsSaturdayTests(unittest.TestCase):
 
         segment_size_post(None, request, db_validation=True)
 
+     @data_provider(freq)
+     def test_user_visit_kfc_of_freq_x_in_last_quarter_on_anydays_evening(self,fre):
+
+        logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on anydays and on evening")
+        request = {
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|3|None"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
 
      ################################### Brand Combination - freq-(1,5,10),duration(all combs), timeofday-night, dayofweek-saturday ######################################
 
@@ -195,6 +228,17 @@ class SegmentSizePostBrandsSaturdayTests(unittest.TestCase):
         logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on saturday and on night")
         request = {
             "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|4|3"]}
+
+        }
+
+        segment_size_post(None, request, db_validation=True)
+
+     @data_provider(freq)
+     def test_user_visit_kfc_of_freq_x_in_last_quarter_on_anydays_night(self,fre):
+
+        logger.info("Find users who visited kfc "+str(fre)+"times in last quarter and on anydays and on night")
+        request = {
+            "brand": {"direct": [brand_id+"|"+str(fre)+"|1q|4|None"]}
 
         }
 
@@ -247,6 +291,9 @@ class SegmentSizePostBrandsSaturdayTests(unittest.TestCase):
         }
 
         segment_size_post(None, request, db_validation=True)
+
+
+
 
 
 

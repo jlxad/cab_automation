@@ -14,7 +14,7 @@ if len(sys.argv) > 3:
 else:
     file_path = '/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/resources/dump.txt'
 
-# API_URL = "http://ec2-54-226-203-78.compute-1.amazonaws.com:8050"
+# API_URL = "http://ec2-54-152-88-4.compute-1.amazonaws.com:8050"
 
 #API_URL = "http://ec2-52-206-109-219.compute-1.amazonaws.com:8050"
 
