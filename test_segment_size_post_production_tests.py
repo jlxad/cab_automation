@@ -19,6 +19,7 @@ class ProductionTests(unittest.TestCase):
      request = {
             "country": {"direct": ["us"]}
         }
+
      count = segment_size_post(None,request,db_validation=False)
      verify_data_in_db_helper(count,"1",query)
 
@@ -346,7 +347,7 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand": {"direct": ["1|1|1y|None|None"]},
+              "brand": {"direct": ["1|1|3m|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
@@ -360,7 +361,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand": {"direct": ["2|1|1y|None|None"]}
+              "brand": {"direct": ["2|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"26",query)
@@ -372,7 +373,7 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand": {"direct": ["8|1|1y|None|None"]},
+              "brand": {"direct": ["8|1|3m|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
@@ -385,7 +386,7 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-             "brand": {"direct": ["282|1|1y|None|None"]},
+             "brand": {"direct": ["282|1|3m|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
@@ -399,7 +400,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-             "brand": {"direct": ["10|1|1y|None|None"]},
+             "brand": {"direct": ["10|1|3m|None|None"]},
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"29",query)
@@ -411,7 +412,7 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand": {"direct": ["25|1|1y|None|None"]},
+              "brand": {"direct": ["25|1|3m|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
@@ -424,7 +425,7 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-             "brand": {"direct": ["48|1|1y|None|None"]},
+             "brand": {"direct": ["48|1|3m|None|None"]},
               "country":{"direct":["us"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
@@ -438,7 +439,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand": {"direct": ["32|1|1y|None|None"]}
+              "brand": {"direct": ["32|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"32",query)
@@ -451,7 +452,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand": {"direct": ["9|1|1y|None|None"]}
+              "brand": {"direct": ["9|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"33",query)
@@ -464,7 +465,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["551102|1|1y|None|None"]}
+              "category":{"direct":["551102|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"34",query)
@@ -477,7 +478,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["581208|1|1y|None|None"]}
+              "category":{"direct":["581208|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"35",query)
@@ -490,7 +491,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["531102|1|1y|None|None"]}
+              "category":{"direct":["531102|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"36",query)
@@ -503,7 +504,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "category":{"direct":["591205|1|1y|None|None"]}
+              "category":{"direct":["591205|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"37",query)
@@ -815,7 +816,7 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["8|1|1y|None|None"]},
+              "brand":{"direct":["8|1|3m|None|None"]},
               "country":{"direct":["us"]},
               "gender":{"direct":["m"]}
                }
@@ -829,7 +830,7 @@ class ProductionTests(unittest.TestCase):
     logger.info("### Usecase:"+str(query)+" ###")
 
     request = {
-              "brand":{"direct":["8|1|1y|None|None"]},
+              "brand":{"direct":["8|1|3m|None|None"]},
               "country":{"direct":["us"]},
               "gender":{"direct":["f"]}
                }
@@ -844,7 +845,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "AND":{"brand":["32|1|1y|None|None","10|1|1y|None|None"]}
+              "AND":{"brand":["32|1|3m|None|None","10|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"62",query)
@@ -857,8 +858,8 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "brand":{"direct":["10|1|1y|None|None"]},
-              "category":{"direct":["531102|1|1y|None|None"]}
+              "brand":{"direct":["10|1|3m|None|None"]},
+              "category":{"direct":["531102|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"63",query)
@@ -871,7 +872,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "AND":{"brand":["1|1|1y|None|None", "48|1|1y|None|None","25|1|1y|None|None"]}
+              "AND":{"brand":["1|1|3m|None|None", "48|1|3m|None|None","25|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"64",query)
@@ -884,7 +885,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "AND":{"brand":["1|1|1y|None|None", "48|1|1y|None|None"]}
+              "AND":{"brand":["1|1|3m|None|None", "48|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"65",query)
@@ -897,7 +898,7 @@ class ProductionTests(unittest.TestCase):
 
     request = {
               "country":{"direct":["us"]},
-              "OR":{"brand":["1|1|1y|None|None", "48|1|1y|None|None"]}
+              "OR":{"brand":["1|1|3m|None|None", "48|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"66",query)
@@ -910,7 +911,7 @@ class ProductionTests(unittest.TestCase):
     request = {
               "country":{"direct":["us"]},
               "behavior":{"direct":["bt"]},
-              "brand":{"direct":["1|1|1y|None|None"]}
+              "brand":{"direct":["1|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"67",query)
@@ -923,7 +924,7 @@ class ProductionTests(unittest.TestCase):
     request = {
               "country":{"direct":["us"]},
               "behavior":{"direct":["bt"]},
-              "NOT":{"brand":["1|1|1y|None|None"]}
+              "NOT":{"brand":["1|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"68",query)
@@ -936,7 +937,7 @@ class ProductionTests(unittest.TestCase):
     request = {
               "behavior":{"direct":["soccermoms"]},
               "country":{"direct":["us"]},
-              "brand":{"direct":["10|1|1y|None|None"]}
+              "brand":{"direct":["10|1|3m|None|None"]}
                }
     count = segment_size_post("AND",request,db_validation=False)
     verify_data_in_db_helper(count,"69",query)
@@ -950,7 +951,7 @@ class ProductionTests(unittest.TestCase):
     request = {"type" : "AND" , "value" : [
                                            {"type" : "country" , "value" : "us" } ,
                                            {"type" : "OR", "value" : [
-                                                                                   { "type" : "brand" , "value" : {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"} } ,
+                                                                                   { "type" : "brand" , "value" : {"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"} } ,
                                                                                    { "type" : "behavior" , "value" : "soccermoms" }
                                                                                  ]
                                            }
@@ -978,7 +979,7 @@ class ProductionTests(unittest.TestCase):
         "type": "AND",
         "value": [{"type": "country","value": "us"},
                   {"type": "AND","value": [{"type": "behavior","value": "soccermoms"},
-                                           {"type": "NOT","value": {"type": "brand","value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}}
+                                           {"type": "NOT","value": {"type": "brand","value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}}
                                            ]
                   }]
     }
@@ -1097,14 +1098,14 @@ class ProductionTests(unittest.TestCase):
                     "type": "OR",
                     "value": [{
                         "type": "brand",
-                        "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"},
+                        "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"},
                     }, {
                         "type": "behavior",
                         "value": "go"
                     },
                         {
                         "type": "category",
-                        "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"},
+                        "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"},
 
                     }
                         ]
@@ -1138,14 +1139,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "AND",
                             "value": [{
                                 "type": "brand",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": "9", "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1165,7 +1166,7 @@ class ProductionTests(unittest.TestCase):
 
                             {
                                 "type": "NOT",
-                                "value":{"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
+                                "value":{"type":"brand","value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
 
                             },
                             {
@@ -1209,7 +1210,7 @@ class ProductionTests(unittest.TestCase):
                             },
                                 {
                                 "type": "category",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1229,7 +1230,7 @@ class ProductionTests(unittest.TestCase):
 
                             {
                                 "type": "NOT",
-                                "value":{"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
+                                "value":{"type":"brand","value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
 
                             },
                             {
@@ -1264,14 +1265,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "AND",
                             "value": [{
                                 "type": "brand",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": "581208", "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1291,7 +1292,7 @@ class ProductionTests(unittest.TestCase):
 
                             {
                                 "type": "NOT",
-                                "value":{"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
+                                "value":{"type":"brand","value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}
 
                             },
                             {
@@ -1326,14 +1327,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "AND",
                             "value": [{
                                 "type": "brand",
-                                "value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
+                                "value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1352,7 +1353,7 @@ class ProductionTests(unittest.TestCase):
                             },
 
                             {
-                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
+                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
                                                       { "type": "NOT","value": {"type":"behavior","value":"bt"}}]
 
 
@@ -1389,14 +1390,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "OR",
                             "value": [{
                                 "type": "brand",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
+                                "value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1415,7 +1416,7 @@ class ProductionTests(unittest.TestCase):
                             },
 
                             {
-                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
+                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
                                                       { "type": "NOT","value": {"type":"behavior","value":"bt"}}]
 
 
@@ -1469,14 +1470,14 @@ class ProductionTests(unittest.TestCase):
                             "type": "OR",
                             "value": [{
                                 "type": "brand",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": 9, "minfreq": "1"}
                             }, {
                                 "type": "behavior",
                                 "value": "go"
                             },
                                 {
                                 "type": "category",
-                                "value": {"duration": "1y", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
+                                "value": {"duration": "3m", "dayofweek": None, "timeofday": None, "id": 581208, "minfreq": "1"}
                             }
                                 ]
                         },
@@ -1495,7 +1496,7 @@ class ProductionTests(unittest.TestCase):
                             },
 
                             {
-                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "1y", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
+                                "type":"AND","value":[{ "type": "NOT","value": {"type":"brand","value":{"duration": "3m", "dayofweek": None, "timeofday": None, "id": "10", "minfreq": "1"}}},
                                                       { "type": "NOT","value": {"type":"behavior","value":"bt"}}]
 
 

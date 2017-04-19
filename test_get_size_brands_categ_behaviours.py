@@ -20,7 +20,7 @@ class GetSizeForAllBrandsCategoriesBehaviors(unittest.TestCase):
          # Get the list of brands from the xadcms db
          brand_name= dict()
          conn = mysql_connect_prod("xadcms")
-         query = "select * from brands where del=0 "
+         query = "select * from brands where id >10376 and del=0 "
          brands_list = get_all_result(conn,query)
          for row in brands_list:
              brand_name[row['id']] = row['brand_name']
@@ -47,38 +47,38 @@ class GetSizeForAllBrandsCategoriesBehaviors(unittest.TestCase):
                  writer.writerow([list1[0],list1[1],list1[2]])
 
 
-     #Usecase: Find users who belong to a particular behaviour audience and lives in country us
-     def test_behav_audience_country_comb(self):
-
-         logger.info("### Usecase: Find users who belong to a particular behaviour audience and lives in country us ###")
-
-         # Get the list of behaviour audiences from the xadcms db
-         behav_name=dict()
-         conn = mysql_connect_prod("xadcms")
-         query = "select * from behaviours where del=0"
-         behav_list = get_all_result(conn,query)
-         for row in behav_list:
-             behav_name[row['backend_key']] = row['display_text']
-         conn.close()
-
-         # Get the audience value for every audience
-         behav_audience = dict()
-         for key in behav_name:
-             request = {
-                  "behavior":{"direct":[key]},
-                  "country":{"direct":["us"]},
-                  "NOT":{"country":["gb"]}
-             }
-
-             count = segment_size_post("AND",request,db_validation=False)
-             behav_audience[behav_name[key]] = count
-
-         # Writing data to xl
-         with open('output_behav_audience.csv', 'wb') as output:
-          writer = csv.writer(output)
-          for key, value in behav_audience.iteritems():
-           writer.writerow([key, value])
-
+     # #Usecase: Find users who belong to a particular behaviour audience and lives in country us
+     # def test_behav_audience_country_comb(self):
+     #
+     #     logger.info("### Usecase: Find users who belong to a particular behaviour audience and lives in country us ###")
+     #
+     #     # Get the list of behaviour audiences from the xadcms db
+     #     behav_name=dict()
+     #     conn = mysql_connect_prod("xadcms")
+     #     query = "select * from behaviours where del=0"
+     #     behav_list = get_all_result(conn,query)
+     #     for row in behav_list:
+     #         behav_name[row['backend_key']] = row['display_text']
+     #     conn.close()
+     #
+     #     # Get the audience value for every audience
+     #     behav_audience = dict()
+     #     for key in behav_name:
+     #         request = {
+     #              "behavior":{"direct":[key]},
+     #              "country":{"direct":["us"]},
+     #              "NOT":{"country":["gb"]}
+     #         }
+     #
+     #         count = segment_size_post("AND",request,db_validation=False)
+     #         behav_audience[behav_name[key]] = count
+     #
+     #     # Writing data to xl
+     #     with open('output_behav_audience.csv', 'wb') as output:
+     #      writer = csv.writer(output)
+     #      for key, value in behav_audience.iteritems():
+     #       writer.writerow([key, value])
+     #
      #Usecase: Find users who visited a category and lives in country us
      def test_category_country_comb(self):
 

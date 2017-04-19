@@ -17,7 +17,7 @@ def segment_size_post(main_type,generic_input_dict,db_validation):
 
     request = build_request_payload_for_segment_size_post(main_type,generic_input_dict)
     request_obj = json.dumps(request).replace("l:","")
-    path = API_URL + "/segment_size?query="+str(request_obj)
+    path = API_URL + "/segment_save?query="+str(request_obj)+"&segment_md5=2007"
 
     logger.debug("Request Path: "+path)
 
