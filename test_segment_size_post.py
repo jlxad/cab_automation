@@ -952,7 +952,7 @@ class SegmentSizePostTests(unittest.TestCase):
         logger.info("### Usecase: Find users of age unknown and belong to country us ###")
         request = {
             "country": {"direct": ["us"]},
-            "age": {"direct":  [0]}}
+            "age": {"direct":  ['u']}}
 
         aud_response = segment_size_post("AND",request,db_validation=False)
         intersect = country_map['us'] & age_map['0']
