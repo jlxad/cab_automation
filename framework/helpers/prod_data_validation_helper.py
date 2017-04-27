@@ -20,7 +20,7 @@ def verify_data_in_db_helper(count, query_number, desc_query):
     t.add_row([desc_query,previous_day_count,today_count,diff])
 
     # Add the data into the csv file
-    with open(fileDir+"/resources/prod.csv",newline='') as csvfile:
+    with open(fileDir+"/resources/prod.csv") as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=' ',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
         spamwriter.writerow([query,today_count])
