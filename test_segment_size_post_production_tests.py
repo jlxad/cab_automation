@@ -2,6 +2,7 @@ import unittest
 from framework.helpers.segment_size_helper import *
 from framework.helpers.prod_data_validation_helper import *
 import logging
+import csv
 
 logger = logging.getLogger("cab.tests.ProductionTests")
 
