@@ -2,7 +2,6 @@ import datetime
 from framework.helpers.mysql_helper import *
 from texttable import Texttable
 from dictionary_query_builder import *
-import csv
 
 t = Texttable()
 t.add_row(['Query', 'Previous_build_count', 'New_build_count', 'Difference_in_Count'])
@@ -18,11 +17,6 @@ def verify_data_in_db_helper(count, query_number, desc_query):
     diff = int(today_count)-int(previous_day_count)
     cnx.close()
     t.add_row([desc_query,previous_day_count,today_count,diff])
-
-    # Add the data into the csv file
-    with open(fileDir+"/resources/prod.csv","wb") as output:
-        writer = csv.writer(output)
-        writer.writerow([desc_query,previous_day_count,today_count])
 
     # Insert the record into the db
     cnx = mysql_connect("test_cab")

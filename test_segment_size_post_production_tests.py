@@ -1574,6 +1574,11 @@ class ProductionTests(unittest.TestCase):
      logger.info("#######################################################")
      print t.draw()
 
+     with open(fileDir+"/resources/prod.csv","wb") as output:
+        writer = csv.writer(output)
+        for row in t._rows:
+         writer.writerow([row[0],row[1],row[2],row[3]])
+
 
 
 

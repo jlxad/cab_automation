@@ -14,6 +14,7 @@ if len(sys.argv) > 3:
 else:
     file_path = '/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/resources/dump.txt'
 
+
 brand_id = "1"
 category_id = "581208"
 
