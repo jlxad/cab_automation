@@ -11,6 +11,8 @@ from test_segment_size_post_categories_weekdays import SegmentSizePostCategoryWe
 from test_segment_size_post_categories_weekends import SegmentSizePostCategorysWeekendTests
 
 
+
+
 if __name__ == "__main__":
 
     test_classes_to_run = [SegmentSizePostTests,SegmentSizePostBrandsSaturdayTests,SegmentSizePostBrandsSundayTests,

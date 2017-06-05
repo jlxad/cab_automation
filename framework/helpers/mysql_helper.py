@@ -1,13 +1,13 @@
 from mysql.connector import (connection)
-
-def mysql_connect(db_name):
-
-    cnx = connection.MySQLConnection(user='root',
-                                         password='venableroot',
-                                         host='ec2-52-39-137-40.us-west-2.compute.amazonaws.com',
-                                         port=3336,
-                                         database=db_name)
-    return cnx
+#
+# def mysql_connect(db_name):
+#
+#     cnx = connection.MySQLConnection(user='root',
+#                                          password='venableroot',
+#                                          host='ec2-52-39-137-40.us-west-2.compute.amazonaws.com',
+#                                          port=3336,
+#                                          database=db_name)
+#     return cnx
 
 def mysql_connect_prod(db_name):
 
