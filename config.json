@@ -1,0 +1,17 @@
+{
+  "mysql": {
+    "prod": {
+      "user": "apps",
+      "password": "appsxaddb",
+      "host": "app-int.db.xad.com",
+      "port": 3336
+    },
+    "qa": {
+      "user": "root",
+      "password": "venableroot",
+      "host": "ec2-52-39-133-167.us-west-2.compute.amazonaws.com",
+      "port": 3336
+    }
+  },
+  "percentage_threshold_production":20
+}

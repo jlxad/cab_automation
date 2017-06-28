@@ -3,6 +3,7 @@ import random
 import datetime
 import os
 import sys
+from config import *
 
 now = datetime.datetime.now()
 
@@ -13,13 +14,7 @@ else:
 
 cur_year =now.year
 
-state_list1 = ['ak','al','ar','az','ca','co','ct','dc','de','fl','ga','ia','id','il','in','ks','ky','la','ma','md',
-              'me','mi','mn','mo','ms','mt','nc','nd','ne','nh','nj','nm','nv','ny','oh','ok','or','pa','ri','sc',
-              'sd','tn','tx','ut','va','vt','wa','wi','wv','wy','hi']
-
-state_list = ['pa', 'az', 'fl', 'la', 'mt', 'gu', 'nm', 'ak', 'nc', 'or', 'vt', 'ms', 'ar', 'il', 'mo', 'in', 'hi', 'wy',
-  'ut', 'mi', 'ks', 'md', 'vi', 'ga', 'dc', 'mn', 'wi', 'ne', 'oh', 'ct', 'nv', 'pr', 'ok', 'al', 'ca', 'co', 'de', 'nd',
-  'wv', 'ky', 'wa', 'me', 'ri', 'sd', 'tn', 'va', 'nh', 'ia', 'sc', 'ny', 'ma', 'id', 'nj', 'tx']
+state_list = states
 
 def create_dictionary_from_file(file_path):
 

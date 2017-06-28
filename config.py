@@ -14,9 +14,14 @@ if len(sys.argv) > 3:
 else:
     file_path = '/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/resources/dump.txt'
 
-# API_URL = "http://ec2-54-226-203-78.compute-1.amazonaws.com:8050"
+API_URL = "http://ec2-54-226-203-78.compute-1.amazonaws.com:8050"
 
 brand_id = "1"
 category_id = "581208"
+
+# List of states
+states = ['pa', 'az', 'fl', 'la', 'mt', 'gu', 'nm', 'ak', 'nc', 'or', 'vt', 'ms', 'ar', 'il', 'mo', 'in', 'hi', 'wy',
+  'ut', 'mi', 'ks', 'md', 'vi', 'ga', 'dc', 'mn', 'wi', 'ne', 'oh', 'ct', 'nv', 'pr', 'ok', 'al', 'ca', 'co', 'de', 'nd',
+  'wv', 'ky', 'wa', 'me', 'ri', 'sd', 'tn', 'va', 'nh', 'ia', 'sc', 'ny', 'ma', 'id', 'nj', 'tx']
 
 

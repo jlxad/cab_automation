@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="84" failures="0" name="test_segment_size_post_production_tests.ProductionTests-20170628144115" skipped="0" tests="84" time="219.382">
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_age_and_exclude_dma_and_exclude_brand" time="4.827">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1188, in test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_age_and_exclude_dma_and_exclude_brand
+    compare_current_and_previous_run_results_in_prod(count,"76",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand" time="4.575">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1314, in test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand
+    compare_current_and_previous_run_results_in_prod(count,"78",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior" time="4.721">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1377, in test_brands_and_categ_and_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior
+    compare_current_and_previous_run_results_in_prod(count,"79",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_brands_or_categ_or_behaviours_and_country_us" time="3.166">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1125, in test_brands_or_categ_or_behaviours_and_country_us
+    compare_current_and_previous_run_results_in_prod(count,"75",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_age_and_exclude_dma_and_exclude_brand" time="2.581">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1252, in test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_age_and_exclude_dma_and_exclude_brand
+    compare_current_and_previous_run_results_in_prod(count,"77",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior" time="4.094">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1440, in test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior
+    compare_current_and_previous_run_results_in_prod(count,"80",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior_include_and_exclude_segment" time="6.167">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1528, in test_brands_or_categ_or_behaviours_and_country_us_and_state_and_gender_and_multiple_age_and_exclude_dma_and_exclude_brand_and_exclude_behavior_include_and_exclude_segment
+    compare_current_and_previous_run_results_in_prod(count,"82",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_country_and_or_between_states_and_dmas" time="2.977">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1058, in test_country_and_or_between_states_and_dmas
+    compare_current_and_previous_run_results_in_prod(count,"73",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_country_and_or_between_states_and_dmas_and_not_dma" time="3.017">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1086, in test_country_and_or_between_states_and_dmas_and_not_dma
+    compare_current_and_previous_run_results_in_prod(count,"74",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_country_and_or_between_states_and_exlude_multiple_dmas" time="3.807">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1031, in test_country_and_or_between_states_and_exlude_multiple_dmas
+    compare_current_and_previous_run_results_in_prod(count,"72",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_cn_and_are_soccermoms" time="2.423">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 768, in test_users_in_cn_and_are_soccermoms
+    compare_current_and_previous_run_results_in_prod(count,"56",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb" time="1.874">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 36, in test_users_in_gb
+    compare_current_and_previous_run_results_in_prod(count,"2",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_13_to_17" time="2.497">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 242, in test_users_in_gb_and_age_13_to_17
+    compare_current_and_previous_run_results_in_prod(count,"17",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_18_to_24" time="2.646">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 256, in test_users_in_gb_and_age_18_to_24
+    compare_current_and_previous_run_results_in_prod(count,"18",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_25_to_34" time="2.880">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 270, in test_users_in_gb_and_age_25_to_34
+    compare_current_and_previous_run_results_in_prod(count,"19",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_35_to_44" time="2.421">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 284, in test_users_in_gb_and_age_35_to_44
+    compare_current_and_previous_run_results_in_prod(count,"20",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_45_to_54" time="2.471">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 298, in test_users_in_gb_and_age_45_to_54
+    compare_current_and_previous_run_results_in_prod(count,"21",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_55_to_64" time="1.426">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 312, in test_users_in_gb_and_age_55_to_64
+    compare_current_and_previous_run_results_in_prod(count,"22",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_greater_than_65" time="2.043">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 326, in test_users_in_gb_and_age_greater_than_65
+    compare_current_and_previous_run_results_in_prod(count,"23",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_gb_and_age_unknown" time="1.738">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 340, in test_users_in_gb_and_age_unknown
+    compare_current_and_previous_run_results_in_prod(count,"24",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_uk_and_female" time="2.669">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 103, in test_users_in_uk_and_female
+    compare_current_and_previous_run_results_in_prod(count,"7",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_uk_and_male" time="2.777">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 90, in test_users_in_uk_and_male
+    compare_current_and_previous_run_results_in_prod(count,"6",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_uk_and_unknown" time="2.443">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 116, in test_users_in_uk_and_unknown
+    compare_current_and_previous_run_results_in_prod(count,"8",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us" time="1.808">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 25, in test_users_in_us
+    compare_current_and_previous_run_results_in_prod(count,"1",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_age_13_to_17" time="1.375">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 130, in test_users_in_us_and_age_13_to_17
+    compare_current_and_previous_run_results_in_prod(count,"9",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_age_18_to_24" time="2.350">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 144, in test_users_in_us_and_age_18_to_24
+    compare_current_and_previous_run_results_in_prod(count,"10",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_age_25_to_34" time="2.452">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 158, in test_users_in_us_and_age_25_to_34
+    compare_current_and_previous_run_results_in_prod(count,"11",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_age_35_to_44" time="2.493">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 172, in test_users_in_us_and_age_35_to_44
+    compare_current_and_previous_run_results_in_prod(count,"12",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_age_45_to_54" time="2.639">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 186, in test_users_in_us_and_age_45_to_54
+    compare_current_and_previous_run_results_in_prod(count,"13",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_age_55_to_64" time="2.250">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 200, in test_users_in_us_and_age_55_to_64
+    compare_current_and_previous_run_results_in_prod(count,"14",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_age_greater_than_65" time="1.425">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 214, in test_users_in_us_and_age_greater_than_65
+    compare_current_and_previous_run_results_in_prod(count,"15",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_big_city_moms" time="2.266">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 742, in test_users_in_us_and_big_city_moms
+    compare_current_and_previous_run_results_in_prod(count,"54",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_commuters" time="1.149">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 677, in test_users_in_us_and_commuters
+    compare_current_and_previous_run_results_in_prod(count,"49",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_dad" time="2.561">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 716, in test_users_in_us_and_dad
+    compare_current_and_previous_run_results_in_prod(count,"52",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_diys" time="2.424">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 690, in test_users_in_us_and_diys
+    compare_current_and_previous_run_results_in_prod(count,"50",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_female" time="2.267">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 64, in test_users_in_us_and_female
+    compare_current_and_previous_run_results_in_prod(count,"4",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_golfers" time="2.819">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 703, in test_users_in_us_and_golfers
+    compare_current_and_previous_run_results_in_prod(count,"51",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_hispanics" time="2.305">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 651, in test_users_in_us_and_hispanics
+    compare_current_and_previous_run_results_in_prod(count,"47",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_home_contractors" time="2.200">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 612, in test_users_in_us_and_home_contractors
+    compare_current_and_previous_run_results_in_prod(count,"44",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_in_california" time="1.464">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 527, in test_users_in_us_and_in_california
+    compare_current_and_previous_run_results_in_prod(count,"38",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_in_california_and_exclude_dma_los_angeles" time="2.277">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 569, in test_users_in_us_and_in_california_and_exclude_dma_los_angeles
+    compare_current_and_previous_run_results_in_prod(count,"41",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_in_california_and_exclude_dma_san_francisco" time="2.855">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 583, in test_users_in_us_and_in_california_and_exclude_dma_san_francisco
+    compare_current_and_previous_run_results_in_prod(count,"42",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_in_market_for_furnitures" time="2.652">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 755, in test_users_in_us_and_in_market_for_furnitures
+    compare_current_and_previous_run_results_in_prod(count,"55",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_in_new_york" time="1.469">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 540, in test_users_in_us_and_in_new_york
+    compare_current_and_previous_run_results_in_prod(count,"39",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_in_new_york_and_exclude_dma_new_york" time="2.853">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 597, in test_users_in_us_and_in_new_york_and_exclude_dma_new_york
+    compare_current_and_previous_run_results_in_prod(count,"43",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_in_texas" time="2.544">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 553, in test_users_in_us_and_in_texas
+    compare_current_and_previous_run_results_in_prod(count,"40",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_inmarket_for_carriers" time="2.248">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 729, in test_users_in_us_and_inmarket_for_carriers
+    compare_current_and_previous_run_results_in_prod(count,"53",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_male" time="2.675">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 51, in test_users_in_us_and_male
+    compare_current_and_previous_run_results_in_prod(count,"3",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_millennials" time="3.229">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 625, in test_users_in_us_and_millennials
+    compare_current_and_previous_run_results_in_prod(count,"45",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_or_not_and_between_segments" time="4.585">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1457, in test_users_in_us_and_or_not_and_between_segments
+    compare_current_and_previous_run_results_in_prod(count,"81",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_soccer_moms" time="3.131">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 638, in test_users_in_us_and_soccer_moms
+    compare_current_and_previous_run_results_in_prod(count,"46",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_sportsenthusiasts" time="1.640">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 664, in test_users_in_us_and_sportsenthusiasts
+    compare_current_and_previous_run_results_in_prod(count,"48",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_stay_at_mom_and_are_female" time="3.445">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1542, in test_users_in_us_and_stay_at_mom_and_are_female
+    compare_current_and_previous_run_results_in_prod(count,"83",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_unknown" time="2.937">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 77, in test_users_in_us_and_unknown
+    compare_current_and_previous_run_results_in_prod(count,"5",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_unknown_age" time="1.551">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 228, in test_users_in_us_and_unknown_age
+    compare_current_and_previous_run_results_in_prod(count,"16",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_visited_home_depot" time="2.716">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 381, in test_users_in_us_and_visited_home_depot
+    compare_current_and_previous_run_results_in_prod(count,"27",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_visited_kfc" time="1.161">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 355, in test_users_in_us_and_visited_kfc
+    compare_current_and_previous_run_results_in_prod(count,"25",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_visited_mcdonalds" time="3.055">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 420, in test_users_in_us_and_visited_mcdonalds
+    compare_current_and_previous_run_results_in_prod(count,"30",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_visited_taco_bell" time="2.333">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 433, in test_users_in_us_and_visited_taco_bell
+    compare_current_and_previous_run_results_in_prod(count,"31",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_us_and_visited_walmart_supercenter" time="2.394">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 394, in test_users_in_us_and_visited_walmart_supercenter
+    compare_current_and_previous_run_results_in_prod(count,"28",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_business_travellers_and_not_visited_kfc" time="2.319">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 931, in test_users_in_usa_and_business_travellers_and_not_visited_kfc
+    compare_current_and_previous_run_results_in_prod(count,"68",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_business_travellers_and_visited_kfc" time="2.390">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 918, in test_users_in_usa_and_business_travellers_and_visited_kfc
+    compare_current_and_previous_run_results_in_prod(count,"67",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_category_automobile_dealers_new_cars" time="3.025">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 472, in test_users_in_usa_and_category_automobile_dealers_new_cars
+    compare_current_and_previous_run_results_in_prod(count,"34",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_category_department_stores" time="1.389">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 498, in test_users_in_usa_and_category_department_stores
+    compare_current_and_previous_run_results_in_prod(count,"36",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_category_pharmacies" time="2.379">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 511, in test_users_in_usa_and_category_pharmacies
+    compare_current_and_previous_run_results_in_prod(count,"37",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_category_restaurants" time="2.505">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 485, in test_users_in_usa_and_category_restaurants
+    compare_current_and_previous_run_results_in_prod(count,"35",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_soccer_moms_and_dad" time="2.242">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 811, in test_users_in_usa_and_soccer_moms_and_dad
+    compare_current_and_previous_run_results_in_prod(count,"59",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_soccer_moms_and_gender_female" time="1.571">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 784, in test_users_in_usa_and_soccer_moms_and_gender_female
+    compare_current_and_previous_run_results_in_prod(count,"57",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_soccer_moms_and_gender_male" time="2.519">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 798, in test_users_in_usa_and_soccer_moms_and_gender_male
+    compare_current_and_previous_run_results_in_prod(count,"58",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_soccer_moms_and_visted_target" time="2.203">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 944, in test_users_in_usa_and_soccer_moms_and_visted_target
+    compare_current_and_previous_run_results_in_prod(count,"69",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_soccermoms_not_visited_target" time="3.231">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 996, in test_users_in_usa_and_soccermoms_not_visited_target
+    compare_current_and_previous_run_results_in_prod(count,"71",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_soccermoms_or_visited_target" time="3.106">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 971, in test_users_in_usa_and_soccermoms_or_visited_target
+    compare_current_and_previous_run_results_in_prod(count,"70",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_burger_king" time="2.327">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 368, in test_users_in_usa_and_visited_burger_king
+    compare_current_and_previous_run_results_in_prod(count,"26",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_costco" time="1.631">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 446, in test_users_in_usa_and_visited_costco
+    compare_current_and_previous_run_results_in_prod(count,"32",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_costco_and_target" time="1.977">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 852, in test_users_in_usa_and_visited_costco_and_target
+    compare_current_and_previous_run_results_in_prod(count,"62",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_home_depot_and_gender_female" time="2.319">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 839, in test_users_in_usa_and_visited_home_depot_and_gender_female
+    compare_current_and_previous_run_results_in_prod(count,"61",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_home_depot_and_gender_male" time="2.761">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 825, in test_users_in_usa_and_visited_home_depot_and_gender_male
+    compare_current_and_previous_run_results_in_prod(count,"60",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_kfc_and_taco" time="2.405">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 892, in test_users_in_usa_and_visited_kfc_and_taco
+    compare_current_and_previous_run_results_in_prod(count,"65",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_kfc_and_taco_and_mcdonalds" time="2.758">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 879, in test_users_in_usa_and_visited_kfc_and_taco_and_mcdonalds
+    compare_current_and_previous_run_results_in_prod(count,"64",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_kfc_or_taco" time="1.505">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 905, in test_users_in_usa_and_visited_kfc_or_taco
+    compare_current_and_previous_run_results_in_prod(count,"66",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_target" time="3.148">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 407, in test_users_in_usa_and_visited_target
+    compare_current_and_previous_run_results_in_prod(count,"29",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_target_and_visited_departmental_stores" time="2.578">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 866, in test_users_in_usa_and_visited_target_and_visited_departmental_stores
+    compare_current_and_previous_run_results_in_prod(count,"63",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_in_usa_and_visited_walmart" time="2.289">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 459, in test_users_in_usa_and_visited_walmart
+    compare_current_and_previous_run_results_in_prod(count,"33",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<testcase classname="test_segment_size_post_production_tests.ProductionTests" name="test_users_who_dont_have_country" time="6.570">
+		<error message="list indices must be integers, not str" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/test_segment_size_post_production_tests.py", line 1566, in test_users_who_dont_have_country
+    compare_current_and_previous_run_results_in_prod(final_count,"84",query)
+  File "/Users/sakthigurumaharaj/Desktop/xad/sakthixad/cab_automation/framework/helpers/prod_data_validation_helper.py", line 14, in compare_current_and_previous_run_results_in_prod
+    previous_day_count = data['user_count']
+TypeError: list indices must be integers, not str
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

@@ -1,0 +1,85 @@
+Query,Previous_build_count,New_build_count,Difference_in_Count
+Find users who live in US and visited walmart and restaurants and Golfers and belong to gender male and of age 18-24 and state california and exclude brand targetand exclude dma- los angeles,127,127,0
+Find users who live in US and visited walmart and restaurants and Golfers and belong to gender male and of age 18-24 or 25-34 and state california and exclude brand targetand exclude dma- los angeles,301,301,0
+Find users who live in US and visited walmart and restaurants and Golfers and belong to gender male and of age 18-24 or 25-34 and state california and exclude brand targetand exclude dma- los angeles and exclude business travellers,189,189,0
+Find users who live in US and visited walmart or restaurants or Golfers,49500368,49500368,0
+Find users who live in US and visited walmart or restaurants or Golfers and belong to gender male and of age 18-24 and state california and exclude brand targetand exclude dma- los angeles,89230,89230,0
+Find users who live in US and visited walmart or restaurants or Golfers and belong to gender male and of age 18-24 or 25-34 and state california and exclude brand targetand exclude dma- los angeles and exclude business travellers,200574,200574,0
+Find users who live in US and visited walmart or restaurants or Golfers and belong to gender male and of age 18-24 or 25-34 and state california and exclude brand targetand exclude dma- los angeles and exclude business travellers and include DLX Auto powered by Polk: Auto Parts Buyer  (iOS) and exclude DLX Auto powered by Polk: Auto Service Buyer  (iOS),4105,4105,0
+Find users who live in US and visited (states ca or ny or dma-austin),36530685,36530685,0
+Find users who live in US and visited (states ca or ny or dma-austin) and not dma-los angeles,25405521,25405521,0
+Find users who live in US and visited states(ca or mn or ny) and exclude (los angeles or minneapolis),53714690,53714690,0
+Find users who lives in country Canada and belong to Soccermoms,351,351,0
+Find users who lives in country UK,70129057,70129057,0
+Find users who lives in country gb and of age 13-17,403501,403501,0
+Find users who lives in country gb and of age 18-24,2421993,2421993,0
+Find users who lives in country gb and of age 25-34,2527464,2527464,0
+Find users who lives in country gb and of age 35-44,887707,887707,0
+Find users who lives in country gb and of age 45-54,2137609,2137609,0
+Find users who lives in country gb and of age 55-64,377135,377135,0
+Find users who lives in country gb and of age more than 65,945436,945436,0
+Find users who lives in country gb and of unknown age,0,0,0
+Find users who lives in country UK and of gender female,12068420,12068420,0
+Find users who lives in country UK and of gender male,19878940,19878940,0
+Find users who lives in country UK and of gender unknown,38181697,38181697,0
+Find users who lives in country US,5.522e+08,5.522e+08,0
+Find users who lives in country us and of age 13-17,4762200,4762200,0
+Find users who lives in country us and of age 18-24,28484340,28484340,0
+Find users who lives in country us and of age 25-34,27797203,27797203,0
+Find users who lives in country us and of age 35-44,7553602,7553602,0
+Find users who lives in country us and of age 45-54,22055637,22055637,0
+Find users who lives in country us and of age 55-64,1749730,1749730,0
+Find users who lives in country us and of age more than 65,2434804,2434804,0
+Find users who lives in country US and are big city moms,5851874,5851874,0
+Find users who lives in country US and are commuters,207806,207806,0
+Find users who lives in country US and are dad,7903445,7903445,0
+Find users who lives in country US and are diys,12723692,12723692,0
+Find users who lives in country US and of gender female,92661109,92661109,0
+Find users who lives in country US and are golfers,2620062,2620062,0
+Find users who lives in country US and are hispanics,11825742,11825742,0
+Find users who lives in country US and are home contractors,3032095,3032095,0
+Find users who lives in country US and of state california,31011689,31011689,0
+Find users who lives in country US and of state california and exclude dma los angeles,19886530,19886530,0
+Find users who lives in country US and of state california and exclude dma san francisco,25752253,25752253,0
+Find users who lives in country US and belong to in market for furnitures,7365990,7365990,0
+Find users who lives in country US and of state New York,18708000,18708000,0
+Find users who lives in country US and of state New York and exclude dma New York,8655601,8655601,0
+Find users who lives in country US and of state Texas,25404864,25404864,0
+Find users who lives in country US and are in market for carriers,3176686,3176686,0
+Find users who lives in country US and of gender male,1.217e+08,1.217e+08,0
+Find users who lives in country US and are millennials,43822952,43822952,0
+Find users who lives in country US and of segment DLX Auto powered by Polk: Auto Parts Buyer  (iOS) and not of segment Kantar Shopcom CPG Buyer: Pizza  (Android)and of segment Kantar Shopcom IRI CPG Buyer: Juice  (Android) or  DLX Auto powered by Polk: In Market: Used  (iOS),15145879,15145879,0
+Find users who lives in country US and are soccermoms,9624070,9624070,0
+Find users who lives in country US and are sportsenthusiasts,9246812,9246812,0
+Find users who lives in country US and female and are stay at moms,6473022,6473022,0
+Find users who lives in country US and of gender unknown,3.378e+08,3.378e+08,0
+Find users who lives in country us and of unknown age,0,0,0
+Find users who lives in country us and visited Home Depot,8064664,8064664,0
+Find users who lives in country us and visited kfc,3285959,3285959,0
+Find users who lives in country us and visited mcdonalds,15013011,15013011,0
+Find users who lives in country us and visited taco bell,6511246,6511246,0
+Find users who lives in country us and visited walmart supercenter,17432175,17432175,0
+Find users who live in US and belong to business Traveler and not visited kfc,2342325,2342325,0
+Find users who live in US and belong to business Traveler and visited kfc,296369,296369,0
+Find users who lives in country us and belong to category Automobile Dealers-New Cars,20463147,20463147,0
+Find users who lives in country us and belong to category Department Stores,30664897,30664897,0
+Find users who lives in country us and belong to category Pharmacies,29066380,29066380,0
+Find users who lives in country us and belong to category Restaurants,48263417,48263417,0
+ Find users who live in US and belong to soccer moms and dad,0,0,0
+ Find users who live in US and belong to soccer moms and of gender female ,9618699,9618699,0
+ Find users who live in US and belong to soccer moms and of gender male,5066,5066,0
+Find users who live in US and belong to Soccer Moms and who visited Target,1304777,1304777,0
+Find users who live in US and belong to soccer moms and not visited target,8319293,8319293,0
+Find users who live in US and belong to soccer moms or visited target,16110609,16110609,0
+Find users who lives in country us and visited Burger King,6362403,6362403,0
+Find users who lives in country us and visited Costco,3841765,3841765,0
+Find users who live in US and visited Costco and Target,1617616,1617616,0
+Find users who live in US and visited Home Depot and gender female,1943456,1943456,0
+Find users who live in US and visited Home Depot and gender male,3751889,3751889,0
+Find users who live in US and visited kfc and taco bell,1760599,1760599,0
+Find users who live in US and visited kfc and taco bell and mcdonalds,1432323,1432323,0
+ Find users who live in US and visited KFC or visited Taco Bell,8036606,8036606,0
+Find users who lives in country us and visited target,7791316,7791316,0
+Find users who live in US and visited target and visited departmental stores,7791316,7791316,0
+Find users who lives in country us and visited walmart,3698897,3698897,0
+Find users who dont have country,66432533,66432533,0

@@ -1,9 +1,8 @@
-from config import API_URL
-from framework.helpers.segment_sql_query_builder_helper import *
 from framework.helpers.segment_request_builder_helper import *
 from framework.helpers.dictionary_query_builder import *
 import requests
 import logging
+import json
 
 logger = logging.getLogger()
 handler = logging.StreamHandler()
