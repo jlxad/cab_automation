@@ -32,6 +32,21 @@ How to run all the tests in a particular test class?
      - Step 2: Run the command : python testfilename testclassname
                e.g python test_segment_size_post.py SegmentSizePostTests
 
+------------------------------------------------------
+Production Test Cases
+------------------------------------------------------
+
+There is a test suite "test_prod_suite.py" that basically runs a set of test cases against the host in production.
+Basically there is a script written that would compare the today's results with the results of the previous run. If the
+difference in the results count is more than 20%, it would throw an exception. There is a job on jenkins that runs
+run everyday and collects the results in the database test_cab in the qa database in the west. The name of the table
+is prod_data
+
+    - All the test cases run against production are inside the test class test_segment_size_production_tests.py
+
+
+
+
 
 
 

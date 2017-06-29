@@ -13,5 +13,32 @@
       "port": 3336
     }
   },
-  "percentage_threshold_production":20
+  "jenkins_qa_host": "/media/ephemeral0/jenkins/workspace/CAB_Functional_Tests",
+  "percentage_threshold_production":20,
+  "user_attributes_map_list": {"brand_map":{}, "category_map":{},"country_map":{},"behaviour_audience_map":{},"custom_audience_map":{},
+                            "state_map":{},"dma_map":{},
+                            "gender_map":{}, "age_map":{"0": {},"1": {},"2": {},"3": {},"4": {},"5": {},"6": {},"7": {}}},
+  "states":["pa", "az", "fl", "la", "mt", "gu", "nm", "ak", "nc", "or", "vt", "ms", "ar", "il", "mo", "in", "hi", "wy",
+  "ut", "mi", "ks", "md", "vi", "ga", "dc", "mn", "wi", "ne", "oh", "ct", "nv", "pr", "ok", "al", "ca", "co", "de", "nd",
+  "wv", "ky", "wa", "me", "ri", "sd", "tn", "va", "nh", "ia", "sc", "ny", "ma", "id", "nj", "tx"],
+
+  "frequency_numbers":[1,5,10],
+
+  "attributes_positions_in_data_file":{
+    "user_id":0,
+    "brand":1,
+    "category":2,
+    "age": 3,
+    "gender":4,
+    "country":5,
+    "predicted_gender":7,
+    "behavioural_audience":9,
+    "custom_audience":11,
+    "state":14,
+    "dma":15
+  },
+  "dump_location":{"brand_map":"brand", "category_map":"category","country_map":"country","behaviour_audience_map":"baud","custom_audience_map":"customaud",
+                            "state_map":"state","dma_map":"dma",
+                            "gender_map":"gender", "age_map":"age"}
+
 }

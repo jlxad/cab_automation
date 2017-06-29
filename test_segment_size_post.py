@@ -20,7 +20,7 @@ class SegmentSizePostTests(unittest.TestCase):
         }
         segment_size_post(None,request,db_validation=True)
 
-    # Find users who live in country Canada
+    # # Find users who live in country Canada
     def test_users_in_country_cn(self):
 
         logger.info("### Usecase: Find users who lives in Canada ###")
