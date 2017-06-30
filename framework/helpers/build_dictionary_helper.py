@@ -56,18 +56,18 @@ def create_dictionary_from_file(file_path):
                                                                                                        user_attributes_location_in_file[
                                                                                                            'custom_audience'])
             # Country
-            user_attributes_list['country_map'] = construct_country_state_dma_map(line,
+            user_attributes_list['country_map'] = construct_country_map(line,
                                                                                   user_attributes_list['country_map'],
                                                                                   user_attributes_location_in_file[
                                                                                       'country'])
 
             # State
-            user_attributes_list['state_map'] = construct_country_state_dma_map(line, user_attributes_list['state_map'],
+            user_attributes_list['state_map'] = construct_state_dma_map(line, user_attributes_list['state_map'],
                                                                                 user_attributes_location_in_file[
                                                                                     'state'])
 
             # Dma
-            user_attributes_list['dma_map'] = construct_country_state_dma_map(line, user_attributes_list['dma_map'],
+            user_attributes_list['dma_map'] = construct_state_dma_map(line, user_attributes_list['dma_map'],
                                                                               user_attributes_location_in_file['dma'])
 
             # Gender Map
@@ -164,41 +164,10 @@ def construct_behaviour_third_party_audience_map(data_row, user_attribute_map, l
 
 # data_row is a record or a line in the text file. Creating country,state and dma
 # dictionary by parsing each column of data from the raw data file
-# location_in_file represents the column number in which country,state or dma data is present
-def construct_country_state_dma_map(data_row, user_attribute_map, location_in_file):
+# location_in_file represents the column number in which state or dma data is present
+def construct_state_dma_map(data_row, user_attribute_map, location_in_file):
     user_attributes_location_in_file = data['attributes_positions_in_data_file']
 
-    # Country
-    if location_in_file is user_attributes_location_in_file['country'] and \
-                    data_row[user_attributes_location_in_file['state']] != '':
-        if data_row[user_attributes_location_in_file['state']] in state_list:
-            if "us" in user_attribute_map:
-                user_attribute_map['us'].add(data_row[user_attributes_location_in_file['user_id']])
-            else:
-                user_id_list = set()
-                user_id_list.add(data_row[user_attributes_location_in_file['user_id']])
-                user_attribute_map['us'] = user_id_list
-        else:
-            if data_row[user_attributes_location_in_file['country']] != '':
-                country_list = data_row[user_attributes_location_in_file['country']].split("|")
-                for ele in country_list:
-                    if ele not in user_attribute_map:
-                        user_ids = set()
-                        user_ids.add(data_row[user_attributes_location_in_file]['user_id'])
-                        user_attribute_map[ele] = user_ids
-                    else:
-                        user_attribute_map[ele].add(data_row[user_attributes_location_in_file['user_id']])
-    else:
-
-        if data_row[user_attributes_location_in_file['country']] != '':
-            country_list = data_row[user_attributes_location_in_file['country']].split("|")
-            for ele in country_list:
-                if ele not in user_attribute_map:
-                    user_ids = set()
-                    user_ids.add(data_row[user_attributes_location_in_file['user_id']])
-                    user_attribute_map[ele] = user_ids
-                else:
-                    user_attribute_map[ele].add(data_row[user_attributes_location_in_file['user_id']])
     # State
     if location_in_file is user_attributes_location_in_file['state'] and \
                     data_row[user_attributes_location_in_file['state']] != '':
@@ -220,6 +189,43 @@ def construct_country_state_dma_map(data_row, user_attribute_map, location_in_fi
         else:
             user_attribute_map[data_row[user_attributes_location_in_file['dma']]].add(
                 data_row[user_attributes_location_in_file['user_id']])
+
+    return user_attribute_map
+
+
+# data_row is a record or a line in the text file. Creating country,state and dma
+# dictionary by parsing each column of data from the raw data file
+# location_in_file represents the column number in which country data is present
+def construct_country_map(data_row, user_attribute_map, location_in_file):
+    user_attributes_location_in_file = data['attributes_positions_in_data_file']
+    if data_row[user_attributes_location_in_file['state']] != '':
+                    if data_row[user_attributes_location_in_file['state']] in state_list:
+                        if "us" in user_attribute_map:
+                            user_attribute_map['us'].add(data_row[user_attributes_location_in_file['user_id']])
+                        else:
+                            list2 = set()
+                            list2.add(data_row[user_attributes_location_in_file['user_id']])
+                            user_attribute_map['us'] = list2
+                    else:
+                        if data_row[user_attributes_location_in_file['country']] != '':
+                            country_list = data_row[user_attributes_location_in_file['country']].split("|")
+                            for ele in country_list:
+                                if ele not in user_attribute_map:
+                                    user_ids = set()
+                                    user_ids.add(data_row[user_attributes_location_in_file['user_id']])
+                                    user_attribute_map[ele] = user_ids
+                                else:
+                                    user_attribute_map[ele].add(data_row[user_attributes_location_in_file['user_id']])
+    else:
+                 if data_row[user_attributes_location_in_file['country']] != '':
+                    country_list = data_row[user_attributes_location_in_file['country']].split("|")
+                    for ele in country_list:
+                        if ele not in user_attribute_map:
+                            list_c = set()
+                            list_c.add(data_row[user_attributes_location_in_file['user_id']])
+                            user_attribute_map[ele] = list_c
+                        else:
+                            user_attribute_map[ele].add(data_row[user_attributes_location_in_file['user_id']])
 
     return user_attribute_map
 
