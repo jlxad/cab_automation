@@ -57,6 +57,8 @@ def segment_size_post(main_type,generic_input_dict,db_validation):
                                    "with the result from the dictionary")
        return response_result
 
+    else:
+       raise Exception("Response contains errors")
 
 def data_provider(fn_data_provider):
     """Data provider decorator, allows another callable to provide the data for the test"""
