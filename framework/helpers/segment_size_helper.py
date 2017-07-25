@@ -28,7 +28,7 @@ def segment_size_post(main_type,generic_input_dict,db_validation):
     logger.debug("Response Body: " + str(response.content))
     logger.debug("Response Code: " + str(response.status_code))
 
-    if response.status_code is 200 and if "num_audience" in response.json():
+    if response.status_code is 200 and "num_audience" in response.json():
 
        response_result = response.json()['num_audience']
        logger.info("Audience count from the response- "+str(response_result))
